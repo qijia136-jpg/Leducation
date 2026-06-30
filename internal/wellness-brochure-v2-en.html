@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mind-Body Wellness Retreat - English Brochure</title>
+    <style>
+      :root {
+        --ink: #20211e;
+        --muted: #626b61;
+        --line: #d9ded2;
+        --paper: #fffdf8;
+        --soft: #f4f0e6;
+        --leaf: #2f6b4f;
+        --tea: #9a6f39;
+        --clay: #bf6d48;
+        --night: #162017;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.55;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 18mm;
+        background: var(--paper);
+        position: relative;
+        overflow: hidden;
+        break-after: page;
+      }
+
+      .cover {
+        display: flex;
+        align-items: flex-end;
+        min-height: 297mm;
+        padding: 0;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(12, 20, 15, 0.88), rgba(12, 20, 15, 0.52), rgba(12, 20, 15, 0.16)),
+          url("../assets/hero-wellness-luxury.png");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .cover-inner {
+        width: 100%;
+        padding: 30mm 18mm;
+      }
+
+      .eyebrow {
+        margin: 0 0 8mm;
+        color: #dbece1;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 154mm;
+        margin: 0 0 8mm;
+        font-size: 47px;
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      .cover-subtitle {
+        max-width: 136mm;
+        margin: 0 0 14mm;
+        font-size: 18px;
+      }
+
+      .cover-meta {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 4mm;
+        max-width: 162mm;
+      }
+
+      .cover-meta div {
+        border: 1px solid rgba(255, 255, 255, 0.36);
+        border-radius: 8px;
+        padding: 4mm;
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .cover-meta strong,
+      .cover-meta span {
+        display: block;
+      }
+
+      .cover-meta span {
+        margin-top: 1mm;
+        color: #e7f1ea;
+        font-size: 13px;
+      }
+
+      .chapter {
+        display: grid;
+        grid-template-columns: 42mm 1fr;
+        gap: 10mm;
+        margin-bottom: 10mm;
+        padding-bottom: 7mm;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .chapter-label {
+        color: var(--tea);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 0 0 4mm;
+        font-size: 28px;
+        line-height: 1.16;
+      }
+
+      .lead {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .grid-2,
+      .grid-3 {
+        display: grid;
+        gap: 5mm;
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 5mm;
+        background: #fff;
+      }
+
+      .card.tint {
+        background: #f7fbf6;
+        border-color: rgba(47, 107, 79, 0.38);
+      }
+
+      .card h3 {
+        margin: 0 0 3mm;
+        color: var(--night);
+        font-size: 18px;
+        line-height: 1.22;
+      }
+
+      .card p {
+        margin: 0 0 3mm;
+        color: var(--muted);
+      }
+
+      .card ul,
+      .plain-list {
+        margin: 0;
+        padding-left: 5mm;
+      }
+
+      .badge {
+        display: inline-block;
+        margin-bottom: 3mm;
+        padding: 1.2mm 2.4mm;
+        border-radius: 999px;
+        background: #ecf5ef;
+        color: var(--leaf);
+        font-size: 11px;
+        font-weight: 800;
+      }
+
+      .quote {
+        margin: 8mm 0;
+        padding: 6mm;
+        border-left: 4px solid var(--clay);
+        background: #fff7ed;
+        color: #4a3629;
+        font-size: 17px;
+        font-weight: 700;
+      }
+
+      .itinerary {
+        display: grid;
+        gap: 3mm;
+      }
+
+      .day-row {
+        display: grid;
+        grid-template-columns: 28mm 1fr;
+        gap: 5mm;
+        align-items: start;
+        padding: 4mm;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .day-row strong {
+        color: var(--leaf);
+      }
+
+      .activity-cloud {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2mm;
+      }
+
+      .activity-cloud span {
+        border-radius: 999px;
+        border: 1px solid rgba(47, 107, 79, 0.25);
+        padding: 1.5mm 2.5mm;
+        color: var(--leaf);
+        background: #fff;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .footer-note {
+        position: absolute;
+        left: 18mm;
+        right: 18mm;
+        bottom: 10mm;
+        display: flex;
+        justify-content: space-between;
+        gap: 8mm;
+        border-top: 1px solid var(--line);
+        padding-top: 4mm;
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .cta {
+        margin-top: 8mm;
+        padding: 7mm;
+        border-radius: 10px;
+        background: var(--night);
+        color: #fff;
+      }
+
+      .cta h3 {
+        margin: 0 0 3mm;
+        font-size: 21px;
+      }
+
+      .cta p {
+        margin: 0;
+        color: #dce9df;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .page {
+          margin: 0;
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <div class="cover-inner">
+        <p class="eyebrow">China Mind-Body Wellness Retreat</p>
+        <h1>10-Day Cultural Wellness Journey</h1>
+        <p class="cover-subtitle">A premium retreat for diverse international guests, blending Chinese contemplative traditions, refined art-making, water-town scenery, West Lake ambience, porcelain craft, and relaxed modern hospitality.</p>
+        <div class="cover-meta">
+          <div><strong>10 Days</strong><span>Balanced practice, culture, and rest</span></div>
+          <div><strong>Zhejiang</strong><span>Water, tea, craft, and slow living</span></div>
+          <div><strong>Shanghai</strong><span>Arrival, transition, and cosmopolitan ease</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">Why This Journey</div>
+        <div>
+          <h2>China, Experienced Slowly</h2>
+          <p class="lead">This retreat is designed for travelers who want more than sightseeing. It offers a cultivated rhythm: quiet mornings, hands-on cultural artistry, graceful excursions, optional rest, and warm human support throughout the journey.</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <article class="card tint">
+          <span class="badge">Mind-body rhythm</span>
+          <h3>Begin with Stillness</h3>
+          <p>Seated meditation, breathwork, tea, and gentle reflection create a calm foundation for the days ahead.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Chinese artistry</span>
+          <h3>Make with Your Hands</h3>
+          <p>Calligraphy, ink painting, porcelain making, and porcelain painting turn cultural learning into a tactile memory.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Elegant discovery</span>
+          <h3>Travel with Texture</h3>
+          <p>West Lake ambience, water-town walks, garden stays, local dining, and craft beer tasting add contrast and pleasure.</p>
+        </article>
+      </div>
+
+      <div class="quote">The tone is restorative, not clinical; cultural, not performative; premium, not rushed.</div>
+
+      <div class="chapter">
+        <div class="chapter-label">Signature Activities</div>
+        <div>
+          <h2>Traditional Culture, Contemporary Comfort</h2>
+          <p class="lead">Each activity is designed to feel approachable for international guests while preserving the atmosphere of Chinese aesthetics.</p>
+        </div>
+      </div>
+
+      <div class="activity-cloud">
+        <span>Seated meditation</span>
+        <span>Breathwork</span>
+        <span>Calligraphy</span>
+        <span>Chinese ink painting</span>
+        <span>Porcelain making</span>
+        <span>Porcelain painting</span>
+        <span>Tea moments</span>
+        <span>Water-town walk</span>
+        <span>West Lake ambience</span>
+        <span>Boutique brewery visit</span>
+        <span>Craft beer tasting</span>
+      </div>
+
+      <div class="footer-note">
+        <span>Mind-Body Wellness Retreat · English Brochure</span>
+        <span>Contact: xletravels@gmail.com</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">10-Day Flow</div>
+        <div>
+          <h2>A Premium Retreat Rhythm</h2>
+          <p class="lead">Inspired by high-end retreat design, the itinerary balances morning practice, curated cultural immersion, rest windows, and light evening integration. Final routing is confirmed after guest preferences, season, and supplier availability are reviewed.</p>
+        </div>
+      </div>
+
+      <div class="itinerary">
+        <div class="day-row">
+          <strong>Day 1</strong>
+          <div><b>Arrival and Private Check-In</b><br>Shanghai or Zhejiang arrival support, welcome tea, retreat orientation, preference review, and quiet evening recovery.</div>
+        </div>
+        <div class="day-row">
+          <strong>Day 2</strong>
+          <div><b>Meditation and Calligraphy</b><br>Morning breathwork and seated meditation, followed by calligraphy practice, tea, journaling, and a relaxed welcome dinner.</div>
+        </div>
+        <div class="day-row">
+          <strong>Day 3</strong>
+          <div><b>West Lake Ambience and Ink Painting</b><br>A slow scenic walk, Chinese ink painting, garden lunch, optional rest or massage block, and evening reflection.</div>
+        </div>
+        <div class="day-row">
+          <strong>Days 4-5</strong>
+          <div><b>Porcelain Making and Painting</b><br>Hands-on porcelain craft, painting on porcelain, tea, quiet focus practice, and a small group art-sharing session.</div>
+        </div>
+        <div class="day-row">
+          <strong>Days 6-7</strong>
+          <div><b>Water Town and Craft Brewery</b><br>A gentle walk through a China water town, local dining, a boutique brewery visit, relaxed craft beer tasting, and non-alcoholic alternatives on request.</div>
+        </div>
+        <div class="day-row">
+          <strong>Days 8-9</strong>
+          <div><b>Integration and Elegant Rest</b><br>Morning meditation, light movement, personal time, optional cultural deepening, and a closing circle.</div>
+        </div>
+        <div class="day-row">
+          <strong>Day 10</strong>
+          <div><b>Departure and Follow-Up</b><br>Departure coordination, feedback collection, and support for onward travel questions.</div>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        <span>Framework itinerary · Subject to confirmation</span>
+        <span>Zhejiang and Shanghai</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">For Guests</div>
+        <div>
+          <h2>What to Confirm Before Booking</h2>
+          <p class="lead">To personalize the experience responsibly, the team confirms practical details before accepting a booking. This keeps the retreat elegant, realistic, and comfortable.</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <h3>Please Share</h3>
+          <ul class="plain-list">
+            <li>Traveler age range and number of guests</li>
+            <li>Preferred travel dates and length of stay</li>
+            <li>Departure city and arrival preferences</li>
+            <li>Room preference and budget range</li>
+            <li>Dietary needs, allergies, mobility limits, and health notes</li>
+            <li>China entry or visa status and insurance needs</li>
+          </ul>
+        </article>
+        <article class="card tint">
+          <h3>We Will Confirm</h3>
+          <ul class="plain-list">
+            <li>Final dates, availability, and quotation</li>
+            <li>Accommodation level and room type</li>
+            <li>Activity suppliers and seasonal feasibility</li>
+            <li>Transport, walking intensity, and weather plan</li>
+            <li>Payment schedule, cancellation terms, invoice needs, and insurance suggestions</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="cta">
+        <h3>Plan Your Journey</h3>
+        <p>Email xletravels@gmail.com with your preferred dates, number of travelers, departure city, room preference, dietary or mobility notes, and the questions you would like the team to answer.</p>
+      </div>
+
+      <div class="footer-note">
+        <span>This is a wellness-oriented cultural travel program, not a medical or clinical service.</span>
+        <span>xletravels@gmail.com</span>
+      </div>
+    </section>
+  </body>
+</html>
