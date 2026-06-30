@@ -3,7 +3,7 @@ const knowledgeBase = [
     title: "Which camp should I choose?",
     keywords: ["choose", "recommend", "which", "difference", "program", "camp"],
     answer:
-      "There are three brochure options: Youth AI & Robotics Camp for students interested in technology and project-based learning; Youth Cultural Exchange Camp for language, culture, city exploration, and peer exchange; and the 10-Day Adult Wellness & Cultural Immersion Retreat for adults seeking a slower travel, wellness, and culture experience."
+      "There are three brochure options: Youth AI & Robotics Camp for students interested in technology and project-based learning; Youth Cultural Exchange Camp for language, culture, city exploration, and peer exchange; and the 10-Day Mind-Body Wellness & Cultural Immersion Retreat for travelers seeking a slower wellness and culture experience."
   },
   {
     title: "What can students expect?",
@@ -18,10 +18,10 @@ const knowledgeBase = [
       "Inclusions may vary by camp. Typical items to confirm are accommodation, meals, local transport during scheduled activities, teaching or activity materials, entrance tickets, insurance, airport transfer, and bilingual support. Please check the selected brochure and ask the team for the latest quotation."
   },
   {
-    title: "Can adults join?",
-    keywords: ["adult", "wellness", "retreat", "parent", "family"],
+    title: "Who is the wellness retreat for?",
+    keywords: ["wellness", "retreat", "parent", "family", "traveler"],
     answer:
-      "Adults should review the China Wellness Cultural Immersion Retreat brochure. Youth camps are designed for student participants, while adult travelers are better matched to the retreat-style itinerary."
+      "Travelers seeking a slower wellness and culture experience should review the China Wellness Cultural Immersion Retreat brochure. Youth camps are designed for student participants, while wellness travelers are better matched to the retreat-style itinerary."
   },
   {
     title: "How do I contact a person?",

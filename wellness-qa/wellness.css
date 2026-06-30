@@ -181,6 +181,8 @@ h2 {
 .signal-list div,
 .timeline article,
 .check-grid article,
+.feature-card,
+.stay-grid article,
 .contact-panel,
 .qa-main {
   border: 1px solid var(--line);
@@ -304,6 +306,63 @@ textarea {
   gap: 16px;
 }
 
+.culture-section {
+  background: #fffaf0;
+}
+
+.stay-section {
+  background: #f7f5ee;
+}
+
+.feature-grid,
+.stay-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.feature-card,
+.stay-grid article {
+  padding: 18px;
+}
+
+.feature-card.emphasis {
+  border-color: rgba(47, 107, 79, 0.45);
+  background: #f4fbf5;
+}
+
+.feature-card span,
+.stay-grid span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--tea);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.feature-card h3,
+.stay-grid h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.feature-card p,
+.stay-grid p {
+  color: var(--muted);
+}
+
+.feature-card ul,
+.stay-grid ul {
+  padding-left: 20px;
+}
+
+.note-strip {
+  margin-top: 18px;
+  border-left: 4px solid var(--clay);
+  background: #fff7ed;
+  padding: 13px 15px;
+}
+
 .check-grid article {
   padding: 18px;
 }
@@ -331,6 +390,8 @@ textarea {
   }
 
   .timeline,
+  .feature-grid,
+  .stay-grid,
   .check-grid {
     grid-template-columns: 1fr;
   }
