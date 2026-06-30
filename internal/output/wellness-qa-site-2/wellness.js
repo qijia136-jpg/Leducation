@@ -1,7 +1,7 @@
 const retreatAnswers = [
   {
     title: "Suitability",
-    keywords: ["suitable", "fit", "who", "parent", "traveler", "senior", "slow", "pace"],
+    keywords: ["suitable", "fit", "who", "parent", "traveler", "senior", "slow", "pace", "luxury"],
     html: `
       <p>This retreat is best for travelers who want a guided China experience with culture, wellness-oriented pacing, local learning, and calmer daily rhythm than a standard tour.</p>
       <ul>
@@ -20,10 +20,18 @@ const retreatAnswers = [
     `
   },
   {
-    title: "Zhejiang and Shanghai Locations",
-    keywords: ["zhejiang", "shanghai", "location", "place", "route", "culture", "city", "mountain"],
+    title: "Retreat Activities",
+    keywords: ["activity", "activities", "meditation", "calligraphy", "ink", "painting", "porcelain", "ceramic", "water", "town", "west", "lake", "brewery", "beer"],
     html: `
-      <p>The retreat can be framed around Zhejiang and Shanghai. Zhejiang supports the slower wellness rhythm through mountain scenery, tea, local food, and quiet stays. Shanghai can support arrival, departure, and a light city transition.</p>
+      <p>The experience can include seated meditation, breathwork, calligraphy, Chinese ink painting, porcelain making, porcelain painting, a China water-town walk, West Lake-inspired scenery, a boutique brewery visit, and relaxed craft beer tasting.</p>
+      <p>The final activity mix should be adjusted by season, supplier availability, guest mobility, and group preference.</p>
+    `
+  },
+  {
+    title: "Zhejiang and Shanghai Locations",
+    keywords: ["zhejiang", "shanghai", "location", "place", "route", "culture", "city", "mountain", "west", "lake", "water", "town"],
+    html: `
+      <p>The retreat can be framed around Zhejiang and Shanghai. Zhejiang supports the slower wellness rhythm through West Lake ambience, water-town scenery, tea, porcelain craft, local food, and quiet stays. Shanghai can support arrival, departure, and a light city transition.</p>
       <ul>
         <li>Locations should be introduced as cultural and lifestyle experiences, not medical or religious promises.</li>
         <li>Route, transportation, walking intensity, and timing must be confirmed before booking.</li>
@@ -33,9 +41,9 @@ const retreatAnswers = [
   },
   {
     title: "Candidate Stay Styles",
-    keywords: ["stay", "hotel", "homestay", "民宿", "garden", "mountain", "accommodation", "room", "where"],
+    keywords: ["stay", "hotel", "homestay", "garden", "nature", "boutique", "accommodation", "room", "where"],
     html: `
-      <p>The retreat can be framed around garden-style, mountain-style, or culture-forward stays in Zhejiang and Shanghai.</p>
+      <p>The retreat can be framed around garden-style, quiet nature, or culture-forward boutique stays in Zhejiang and Shanghai.</p>
       <p>These should not be promised until operations confirms availability, room standards, access, meals, group capacity, and payment or cancellation terms.</p>
     `
   },
@@ -69,9 +77,10 @@ const retreatAnswers = [
   },
   {
     title: "Food and Dietary Needs",
-    keywords: ["food", "meal", "diet", "vegetarian", "allergy", "halal", "kosher"],
+    keywords: ["food", "meal", "diet", "vegetarian", "allergy", "halal", "kosher", "beer", "brewery"],
     html: `
       <p>Dietary needs should be collected early and confirmed with local suppliers. The team should know allergies, vegetarian preference, religious dietary restrictions, food intolerances, and any medical diet requirements.</p>
+      <p>If a craft beer tasting is included, non-alcoholic alternatives should be available on request.</p>
     `
   },
   {
@@ -117,7 +126,7 @@ function respond(question) {
   const trimmed = question.trim();
 
   if (!trimmed) {
-    output.innerHTML = "<h3>Ask about the mind-body wellness retreat</h3><p>Try questions about suitability, pace, inclusions, documents, food, medical boundaries, or manual support.</p>";
+    output.innerHTML = "<h3>Ask about the mind-body wellness retreat</h3><p>Try questions about suitability, pace, inclusions, activities, locations, food, medical boundaries, or manual support.</p>";
     return;
   }
 

@@ -70,7 +70,7 @@ a {
   padding: 86px 28px 50px;
   background:
     linear-gradient(90deg, rgba(26, 31, 25, 0.84) 0%, rgba(26, 31, 25, 0.55) 46%, rgba(26, 31, 25, 0.2) 100%),
-    url("../assets/hero-camp.png");
+    url("../assets/hero-wellness-luxury.png");
   background-position: center;
   background-size: cover;
 }
@@ -361,6 +361,23 @@ textarea {
   border-left: 4px solid var(--clay);
   background: #fff7ed;
   padding: 13px 15px;
+}
+
+.activity-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.activity-strip span {
+  border: 1px solid rgba(47, 107, 79, 0.26);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--leaf);
+  padding: 7px 11px;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .check-grid article {
