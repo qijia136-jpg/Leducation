@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
@@ -31,6 +31,7 @@
 
       .page {
         width: 210mm;
+        height: 297mm;
         min-height: 297mm;
         margin: 0 auto;
         padding: 18mm;
@@ -38,6 +39,7 @@
         position: relative;
         overflow: hidden;
         break-after: page;
+        page-break-after: always;
       }
 
       .cover {
@@ -113,9 +115,9 @@
       .chapter {
         display: grid;
         grid-template-columns: 42mm 1fr;
-        gap: 10mm;
-        margin-bottom: 10mm;
-        padding-bottom: 7mm;
+        gap: 8mm;
+        margin-bottom: 7mm;
+        padding-bottom: 5mm;
         border-bottom: 1px solid var(--line);
       }
 
@@ -218,13 +220,15 @@
 
       .daily-card {
         display: grid;
-        grid-template-columns: 24mm 1fr;
+        grid-template-columns: 18mm 1fr;
         gap: 3.5mm;
-        margin-bottom: 3mm;
+        margin-bottom: 4mm;
         padding: 3.5mm;
         border: 1px solid var(--line);
         border-radius: 8px;
-        background: #fff;
+        background: rgba(255, 255, 255, 0.94);
+        break-inside: avoid;
+        page-break-inside: avoid;
       }
 
       .daily-card .day-tag {
@@ -233,27 +237,34 @@
       }
 
       .daily-card h3 {
-        margin: 0 0 2mm;
-        font-size: 18px;
+        margin: 0 0 1.4mm;
+        font-size: 16px;
         line-height: 1.2;
       }
 
       .daily-card p {
-        margin: 0 0 2mm;
+        margin: 0 0 1.4mm;
         color: var(--muted);
+        font-size: 12.5px;
+        line-height: 1.48;
       }
 
       .daily-card img {
         width: 100%;
-        height: 16mm;
+        height: 44mm;
         object-fit: cover;
+        object-position: center 38%;
+        background: #f3f0e8;
         border-radius: 6px;
-        margin-bottom: 3mm;
+        margin-bottom: 2mm;
+        opacity: 0.82;
+        filter: saturate(0.9) contrast(0.96);
       }
 
       .daily-card .meta {
         color: #7a6040;
-        font-size: 12px;
+        font-size: 10.2px;
+        line-height: 1.35;
         font-weight: 700;
       }
 
@@ -333,11 +344,11 @@
       <div class="cover-inner">
         <p class="eyebrow">China Mind-Body Wellness Retreat</p>
         <h1>10 天身心疗愈文化沉浸之旅</h1>
-        <p class="cover-subtitle">面向多元国际高端客群，从江西景德镇瓷器制作开始，让客人在 10 天旅程结束时带走自己的瓷器、书法与国画作品。</p>
+        <p class="cover-subtitle">面向多元国际高端客群的中国文化深度体验：上海、江南水乡、景德镇，结合疗愈修行、瓷器手作、书法国画、轻奢餐饮与高端私定服务。</p>
         <div class="cover-meta">
           <div><strong>10 天</strong><span>练习、文化与休整的平衡</span></div>
-          <div><strong>江西</strong><span>第一个正式行程即进入景德镇瓷器体验</span></div>
-          <div><strong>上海</strong><span>抵达、转换与国际化便利</span></div>
+          <div><strong>上海 · 江南水乡 · 景德镇</strong><span>中国文化深度体验与疗愈旅行</span></div>
+          <div><strong>5999.99 美金起</strong><span>不含往返中美航班</span></div>
         </div>
       </div>
     </section>
@@ -347,7 +358,7 @@
         <div class="chapter-label">行程速览</div>
         <div>
           <h2>建议 11 天 9 晚旅行节奏</h2>
-          <p class="lead">营地核心体验为中国境内 10 天。因国际航班跨时区与抵离时间安排，客户实际旅行通常可按 11 天 9 晚沟通。最终航班、酒店与线路以确认报价为准。图片仅供参考，因路线、天气、供应商与现场条件等原因，最终以实际安排为准。</p>
+          <p class="lead">营地核心体验为中国境内 10 天。线路从上海国际大都市开启，前往中国景德镇（瓷器之都）完成瓷器体验，再进入浙江展开疗愈修行、江南水乡、啤酒体验与西湖游历。因国际航班跨时区与抵离时间安排，客户实际旅行通常可按 11 天 9 晚沟通。图片仅供参考，因路线、天气、供应商与现场条件等原因，最终以实际安排为准。</p>
         </div>
       </div>
 
@@ -357,8 +368,9 @@
           <ul>
             <li>首选抵达：上海浦东国际机场 PVG</li>
             <li>备选抵达：杭州萧山国际机场 HGH</li>
-            <li>建议离境：上海浦东 PVG 或杭州 HGH，视最终线路确认</li>
-            <li>第一个正式行程点：江西景德镇，航班确认后安排高铁或专车衔接</li>
+            <li>建议离境：上海浦东 PVG，杭州 HGH 可作为备选，视最终线路确认</li>
+            <li>第 1 天：入住上海，开启外滩之旅与都市之旅</li>
+            <li>第 2 天：前往中国景德镇（瓷器之都），航班确认后安排高铁或专车衔接</li>
             <li>建议尽量选择下午前抵达，方便接机、入住、欢迎茶与休整</li>
           </ul>
         </article>
@@ -373,7 +385,7 @@
         </article>
       </div>
 
-      <div class="quote">报名信息建议一次性收集：人数、日期、抵达城市、房型偏好、护照国籍、行动能力、饮食限制、是否需要非酒精替代饮品。</div>
+      <div class="quote">价格：5999.99 美金起 / 人，不含往返中美航班。价格标准默认为标间双人住；如有单人住宿需求，需要补差价。</div>
 
       <div class="footer-note">
         <span>图片仅供参考</span>
@@ -386,7 +398,7 @@
         <div class="chapter-label">项目亮点</div>
         <div>
           <h2>把中国文化慢下来体验</h2>
-          <p class="lead">这不是普通观光团，而是一段有节奏的文化疗愈旅程：先在景德镇完成瓷器制作与送烧，为作品留出完成和打包时间；随后进入身心练习、书画体验、城市与水乡游历。</p>
+          <p class="lead">这不是普通观光团，而是一段中国文化深度体验与高端定制疗愈之旅：先在上海完成国际化抵达和城市切换，再到中国景德镇（瓷器之都）完成瓷器制作与送烧，随后进入浙江身心练习、桐柏宫道教文化相关内容、书画体验、水乡与西湖游历。</p>
         </div>
       </div>
 
@@ -399,12 +411,12 @@
         <article class="card">
           <span class="badge">东方艺术</span>
           <h3>用手理解文化</h3>
-          <p>客人在景德镇亲手做瓷器，并在行程结束时带走自己的瓷器、书法和国画作品，形成可触摸、可带回家的记忆。</p>
+          <p>客人在中国景德镇（瓷器之都）亲手做瓷器，并在行程结束时带走自己的瓷器、书法和国画作品，形成可触摸、可带回家的记忆。</p>
         </article>
         <article class="card">
           <span class="badge">轻奢探索</span>
           <h3>有质感的游历</h3>
-          <p>西湖意境、水城古镇、花园式住宿、地方餐饮与精酿啤酒体验，形成传统与当代的对照。</p>
+          <p>上海都市开场、浙江修行、水城古镇、西湖意境、花园式住宿、地方餐饮与半天精酿啤酒体验，形成传统与当代的对照。</p>
         </article>
       </div>
 
@@ -426,6 +438,8 @@
         <span>做瓷器</span>
         <span>画瓷器</span>
         <span>茶体验</span>
+        <span>上海外滩</span>
+        <span>桐柏宫道教文化</span>
         <span>水城古镇</span>
         <span>西湖意境</span>
         <span>啤酒厂参观</span>
@@ -443,34 +457,34 @@
         <div class="chapter-label">每日行程</div>
         <div>
           <h2>10 天高端疗愈营安排</h2>
-          <p class="lead">参考高端疗愈营的日程逻辑：每天有固定晨间练习、精选文化体验、休整窗口和轻量晚间整合。实际日期、路线、天气与供应商安排以最终确认单为准。</p>
+          <p class="lead">参考高端疗愈营的日程逻辑：前段完成城市抵达和瓷器手作，中段安排数天疗愈修行与文化体验，后段先去江南水乡，再去西湖，最后返程。实际日期、路线、天气与供应商安排以最终确认单为准。</p>
         </div>
       </div>
 
       <div class="itinerary">
         <div class="day-row">
           <strong>Day 1</strong>
-          <div><b>抵达与景德镇衔接</b><br>经上海或杭州抵达后，转往江西景德镇。入住后进行欢迎茶、行程说明，并预览瓷器制作流程，让作品尽早进入后续烧制周期。</div>
+          <div><b>入住上海，外滩与都市之旅</b><br>抵达上海国际大都市，入住休整。傍晚开启外滩之旅和都市之旅，用轻松方式进入中国旅行节奏。</div>
         </div>
         <div class="day-row">
           <strong>Day 2</strong>
-          <div><b>景德镇瓷器制作</b><br>在景德镇体验瓷土成型、器物比例与工艺讲解。把瓷器安排在前段，方便后续修整、烧制和旅行打包。</div>
+          <div><b>中国景德镇（瓷器之都）瓷器之旅</b><br>前往中国景德镇（瓷器之都），体验瓷土成型、画瓷与送烧。把瓷器安排在前段，方便后续修整、烧制和旅行打包。</div>
         </div>
         <div class="day-row">
           <strong>Day 3</strong>
-          <div><b>画瓷与送烧</b><br>客人在瓷面上绘制山水、花草或个人符号，随后将作品交由工作室烧制、整理与保护性包装。</div>
+          <div><b>抵达浙江，开启疗愈修行</b><br>抵达浙江，进入更安静的江南场域。以打坐、呼吸、茶与桐柏宫道教文化相关内容开启身心疗愈节奏。</div>
         </div>
         <div class="day-row">
-          <strong>Days 4-5</strong>
-          <div><b>书法冥想、西湖与国画</b><br>通过呼吸练习、书法、西湖意境与国画水墨进入更安静的身心节奏。</div>
+          <strong>Days 4-6</strong>
+          <div><b>修行、书法国画与半天啤酒体验</b><br>在浙江安排数天修行，结合打坐、轻运动、书法、国画和桐柏宫道教文化相关内容；其中穿插半天啤酒厂参观与啤酒体验。</div>
         </div>
         <div class="day-row">
-          <strong>Days 6-7</strong>
-          <div><b>水城古镇与精酿体验</b><br>漫步中国水城古镇，观察石桥、河道、院落与街巷肌理。随后参观精品啤酒厂，安排精酿品鉴；可提供非酒精替代选择。</div>
+          <strong>Day 7</strong>
+          <div><b>江南水乡之旅</b><br>修行结束后，先去江南水乡，漫步水城古镇，观察石桥、河道、院落与街巷肌理。</div>
         </div>
         <div class="day-row">
           <strong>Days 8-9</strong>
-          <div><b>整合休整与作品复核</b><br>晨间冥想、轻步行、个人时间、小组分享，复核瓷器、书法与国画作品，并准备结营展示。</div>
+          <div><b>西湖游历、作品复核与返程准备</b><br>水乡之后再去西湖，感受湖面、桥、园林与山水意境；随后复核瓷器、书法与国画作品，安排告别晚宴和返程衔接。</div>
         </div>
         <div class="day-row">
           <strong>Day 10</strong>
@@ -496,19 +510,19 @@
       <div class="daily-card">
         <div class="day-tag">第 1 天</div>
         <div>
-          <img src="../assets/itinerary/day-01.png" alt="多元国际客人在景德镇风格瓷器工作室制作瓷器">
-          <h3>抵达景德镇与瓷器工作室导入</h3>
-          <p>客人经上海或杭州抵达后转往江西景德镇。第一个正式行程即进入瓷器工作室，了解瓷土、器型、景德镇瓷器文化与烧制周期，让个人作品尽早开始制作。</p>
-          <div class="meta">餐食：欢迎茶 / 视抵达时间安排简餐。住宿：景德镇或周边高端酒店或精品疗愈型住宿。</div>
+          <img src="../assets/itinerary/day-01-shanghai.png" alt="多元国际客人在上海外滩开启中国疗愈文化之旅">
+          <h3>入住上海，外滩与都市之旅</h3>
+          <p>客人抵达上海国际大都市后入住休整。傍晚安排外滩与城市慢行，用黄浦江、历史建筑和当代都市感完成旅行开场，让国际客人先舒适进入中国节奏。</p>
+          <div class="meta">餐食：欢迎茶 / 视抵达时间安排简餐。住宿：上海五星奢华酒店或准五星标准酒店。</div>
         </div>
       </div>
       <div class="daily-card">
         <div class="day-tag">第 2 天</div>
         <div>
           <img src="../assets/itinerary/day-02.png" alt="多元国际客人在温暖瓷器工作室画青花瓷">
-          <h3>景德镇瓷器成型、画瓷与送烧</h3>
-          <p>在导师指导下，客人体验泥土成型、器物比例、手部力度与青花画瓷。选定作品交由工作室烧制、整理和保护性打包，作为旅程结束时可带走的核心纪念。</p>
-          <div class="meta">餐食：早餐、午餐、晚餐。住宿：景德镇或周边高端酒店或精品疗愈型住宿。</div>
+          <h3>中国景德镇（瓷器之都）瓷器之旅</h3>
+          <p>前往中国景德镇（瓷器之都）。在导师指导下，客人体验泥土成型、器物比例、手部力度与青花画瓷。选定作品交由工作室烧制、整理和保护性打包，作为旅程结束时可带走的核心纪念。</p>
+          <div class="meta">餐食：早餐、轻奢午餐、轻奢晚餐。住宿：景德镇或周边五星奢华酒店或准五星标准酒店。</div>
         </div>
       </div>
 
@@ -523,35 +537,26 @@
         <div class="chapter-label">每日细节</div>
         <div>
           <h2>练习、笔墨与景观</h2>
-          <p class="lead">景德镇作品进入烧制流程后，行程转向冥想、书法、国画和更慢的景观体验。</p>
+          <p class="lead">景德镇作品进入烧制流程后，行程进入浙江，结合打坐、书画、轻运动和桐柏宫道教文化相关内容，形成更完整的疗愈修行段落。</p>
         </div>
       </div>
 
       <div class="daily-card">
         <div class="day-tag">第 3 天</div>
         <div>
-          <img src="../assets/itinerary/day-03.png" alt="多元国际客人在雅致工作室练习书法与水墨">
-          <h3>打坐冥想与书法</h3>
-          <p>上午从呼吸、坐姿和安静专注开始。书法体验中，导师会讲解笔压、墨色、身体姿态和节奏，让外国客人通过手的动作进入中国文化，并留下自己的书法作品。</p>
-          <div class="meta">餐食：早餐、午餐、晚餐。住宿：高端酒店或精品疗愈型住宿。</div>
+          <img src="../assets/itinerary/day-03-zhejiang-tongbai.png" alt="多元国际客人在浙江道教文化氛围中打坐修行">
+          <h3>抵达浙江，桐柏宫道教文化与疗愈修行导入</h3>
+          <p>客人抵达浙江后进入更安静的江南场域。上午从呼吸、坐姿和安静专注开始，下午结合茶、书写与桐柏宫道教文化相关内容，帮助客人从旅行状态进入修行状态。</p>
+          <div class="meta">餐食：早餐、轻奢午餐、轻奢晚餐。住宿：五星奢华酒店或准五星标准酒店。</div>
         </div>
       </div>
       <div class="daily-card">
         <div class="day-tag">第 4 天</div>
         <div>
-          <img src="../assets/itinerary/day-04.png" alt="多元国际客人在西湖意境中慢行">
-          <h3>西湖意境与国画水墨</h3>
-          <p>安排西湖氛围的慢行体验，感受水面、桥、园林、远山和层次感。下午国画课程把这种意境转化为笔墨、留白、浓淡和山水构图。</p>
-          <div class="meta">餐食：早餐、午餐、晚餐。住宿：高端酒店或精品疗愈型住宿。</div>
-        </div>
-      </div>
-      <div class="daily-card">
-        <div class="day-tag">第 5 天</div>
-        <div>
-          <img src="../assets/itinerary/day-05.png" alt="多元国际客人在中国水城古镇石桥上行走">
-          <h3>水城古镇与运河漫步</h3>
-          <p>走进中国水城古镇，看河道、石桥、院落、街巷肌理和地方小店。参访节奏以观察、拍摄和轻交流为主，不做赶场式观光。</p>
-          <div class="meta">餐食：早餐、午餐、晚餐。住宿：高端酒店或精品疗愈型住宿。</div>
+          <img src="../assets/itinerary/day-03.png" alt="多元国际客人在雅致工作室练习书法与水墨">
+          <h3>书法冥想与国画水墨</h3>
+          <p>书法体验中，导师会讲解笔压、墨色、身体姿态和节奏，让外国客人通过手的动作进入中国文化。国画课程进一步把安静感转化为笔墨、留白、浓淡和山水构图。</p>
+          <div class="meta">餐食：早餐、轻奢午餐、轻奢晚餐。住宿：五星奢华酒店或准五星标准酒店。</div>
         </div>
       </div>
 
@@ -565,8 +570,18 @@
       <div class="chapter">
         <div class="chapter-label">每日细节</div>
         <div>
-          <h2>水城、手作与当代风味</h2>
-          <p class="lead">后半段加入水城古镇、当代精酿文化、充分休整和有仪式感的收束，让行程不只是密集参观，而是有呼吸的旅程。</p>
+          <h2>修行加深与当代风味</h2>
+          <p class="lead">浙江段保留更慢的疗愈节奏，同时穿插半天啤酒体验，让行程有文化深度，也有轻松社交感。</p>
+        </div>
+      </div>
+
+      <div class="daily-card">
+        <div class="day-tag">第 5 天</div>
+        <div>
+          <img src="../assets/itinerary/day-07.png" alt="多元国际客人在中式花园做轻柔身心练习">
+          <h3>轻运动、茶与修行加深</h3>
+          <p>上午以冥想和轻柔身体练习整合前几天的旅行节奏。下午可根据客人状态安排茶、静心书写、艺术加深或桐柏宫道教文化相关内容延展。</p>
+          <div class="meta">餐食：早餐、轻奢午餐、轻奢晚餐。住宿：五星奢华酒店或准五星标准酒店。</div>
         </div>
       </div>
 
@@ -574,27 +589,43 @@
         <div class="day-tag">第 6 天</div>
         <div>
           <img src="../assets/itinerary/day-06.png" alt="多元国际客人在精品啤酒厂参观和品鉴">
-          <h3>啤酒厂参观与精酿品鉴</h3>
-          <p>参观精品啤酒厂，了解原料、发酵、生产流程和精酿品鉴语言。可按客人需求安排非酒精替代饮品，让活动保持轻松、包容和社交友好。</p>
-          <div class="meta">餐食：早餐、午餐、品鉴 / 轻晚餐。住宿：高端酒店或精品疗愈型住宿。</div>
+          <h3>半天啤酒厂参观与啤酒体验</h3>
+          <p>在浙江修行期间穿插半天参观精品啤酒厂，了解原料、发酵、生产流程和精酿品鉴语言，并安排啤酒体验。可按客人需求安排非酒精替代饮品，让活动保持轻松、包容和社交友好。</p>
+          <div class="meta">餐食：早餐、轻奢午餐、啤酒品鉴 / 轻奢晚餐。住宿：五星奢华酒店或准五星标准酒店。</div>
         </div>
       </div>
+
+      <div class="footer-note">
+        <span>图片仅供参考</span>
+        <span>路线与天气调整以实际为准</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">每日细节</div>
+        <div>
+          <h2>江南水乡与西湖</h2>
+          <p class="lead">修行结束后先去江南水乡，再去西湖，让中国文化和疗愈旅行形成完整节奏。</p>
+        </div>
+      </div>
+
       <div class="daily-card">
         <div class="day-tag">第 7 天</div>
         <div>
-          <img src="../assets/itinerary/day-07.png" alt="多元国际客人在中式花园做轻柔身心练习">
-          <h3>轻运动与文化加深</h3>
-          <p>上午以冥想和轻柔身体练习整合前几天的旅行节奏。下午可根据客人状态安排艺术加深、茶、休整型体验或周边轻探访。</p>
-          <div class="meta">餐食：早餐、午餐、晚餐。住宿：高端酒店或精品疗愈型住宿。</div>
+          <img src="../assets/itinerary/day-05.png" alt="多元国际客人在中国水城古镇石桥上行走">
+          <h3>江南水乡与水城古镇</h3>
+          <p>修行结束后，先走进江南水乡，看河道、石桥、院落、街巷肌理和地方小店。参访节奏以观察、拍摄和轻交流为主，不做赶场式观光。</p>
+          <div class="meta">餐食：早餐、轻奢午餐、轻奢晚餐。住宿：五星奢华酒店或准五星标准酒店。</div>
         </div>
       </div>
       <div class="daily-card">
         <div class="day-tag">第 8 天</div>
         <div>
-          <img src="../assets/itinerary/day-08.png" alt="多元国际客人在茶席旁复核瓷器书法和国画作品">
-          <h3>作品复核与高级休整</h3>
-          <p>团队复核瓷器烧制或整理状态，并与客人确认书法、国画作品的保存和携带方式。这一天保留充足休整，避免行程后半段过度紧凑。</p>
-          <div class="meta">餐食：早餐、午餐、晚餐。住宿：高端酒店或精品疗愈型住宿。</div>
+          <img src="../assets/itinerary/day-08-westlake.png" alt="多元国际客人在西湖意境中慢行">
+          <h3>西湖游历与作品复核</h3>
+          <p>水乡之后再去西湖，感受水面、桥、园林、远山和层次感。团队同步复核瓷器烧制或整理状态，并与客人确认书法、国画作品的保存和携带方式。</p>
+          <div class="meta">餐食：早餐、轻奢午餐、轻奢晚餐。住宿：五星奢华酒店或准五星标准酒店。</div>
         </div>
       </div>
 
@@ -618,16 +649,16 @@
         <div>
           <img src="../assets/itinerary/day-09.png" alt="多元国际客人在温暖茶席旁进行结营分享">
           <h3>整合、结营分享与告别晚宴</h3>
-          <p>最后一个完整日保持安静和仪式感。客人分享体验、保留个人时间，并以告别晚宴完成从疗愈营回到日常生活的过渡。</p>
-          <div class="meta">餐食：早餐、午餐、告别晚宴。住宿：高端酒店或精品疗愈型住宿。</div>
+          <p>最后一个完整日保持安静和仪式感。客人分享体验、保留个人时间，确认作品保护性打包，并以告别晚宴完成从疗愈营回到日常生活的过渡。</p>
+          <div class="meta">餐食：早餐、轻奢午餐、告别晚宴。住宿：上海或最终确认城市高端酒店。</div>
         </div>
       </div>
       <div class="daily-card">
-        <div class="day-tag">第 10-11 天</div>
+        <div class="day-tag">第 10 天</div>
         <div>
           <img src="../assets/itinerary/day-10.png" alt="多元国际客人带着打包好的瓷器书法和国画作品离开">
           <h3>带作品离营与国际返程</h3>
-          <p>团队协助退房、送站或送机、行李动线和后续旅行问题。客人带着保护性打包好的瓷器、书法与国画作品离开；长途国际航班可能在第 11 个自然日抵达目的地。</p>
+          <p>团队协助退房、送机、行李动线和后续旅行问题。客人带着保护性打包好的瓷器、书法与国画作品离开；长途国际航班可能在第 11 个自然日抵达目的地。</p>
           <div class="meta">餐食：第 10 天视酒店时间含早餐。第 11 天为国际航班缓冲日。</div>
         </div>
       </div>
@@ -643,7 +674,7 @@
         <div class="chapter-label">服务说明</div>
         <div>
           <h2>参考包含项目与报名备注</h2>
-          <p class="lead">参照轻奢研学小册子的呈现方式，正式报价建议在日期、人数、酒店等级、房型、航班路线和供应商可用性确认后出具。</p>
+          <p class="lead">项目价格 5999.99 美金起 / 人，不含往返中美航班。价格标准默认为标间双人住；如有单人住宿需求，需要补差价。正式报价建议在日期、人数、酒店等级、房型、航班路线和供应商可用性确认后出具。</p>
         </div>
       </div>
 
@@ -651,10 +682,10 @@
         <article class="card tint">
           <h3>通常包含</h3>
           <ul>
-            <li>江西、浙江、上海高端酒店或精品疗愈型住宿，或同等级住宿</li>
-            <li>行程内早餐及指定午餐、晚餐</li>
+            <li>上海、中国景德镇、浙江五星奢华酒店，或准五星标准酒店</li>
+            <li>用餐为轻奢餐厅，并可安排黑珍珠必吃榜（中国的米其林榜单）里的高端餐厅</li>
             <li>列明的文化工作坊、基础材料与预约协调</li>
-            <li>确认活动期间的当地专车或地面交通安排</li>
+            <li>全私人定制行程，含包车；如需高铁，则安排商务座</li>
             <li>双语协调、当地接待支持与抵达前客户沟通</li>
             <li>最终行程中明确列出的门票或体验费用</li>
           </ul>
@@ -662,9 +693,9 @@
         <article class="card">
           <h3>通常不含</h3>
           <ul>
-            <li>国际或境内航班、机场税、行李费</li>
+            <li>往返中美航班、机场税、行李费</li>
             <li>护照、签证、中国入境材料与旅行保险，除非报价中特别说明</li>
-            <li>单房差或超出确认报价的房型升级</li>
+            <li>单人住宿补差价，或超出默认标间双人住标准的房型升级</li>
             <li>个人消费、购物、洗衣、迷你吧和可选水疗项目</li>
             <li>安排品鉴之外的酒水，以及未以书面列明的服务</li>
             <li>图片仅供参考，实际安排受路线、天气、供应商与现场条件影响，以最终确认为准</li>
@@ -673,10 +704,10 @@
         </article>
       </div>
 
-      <div class="quote">建议报价格式：每人项目费用、单房差、付款节点、取消政策、房型标准、餐食标准、交通标准，以及已包含体验费用清单。</div>
+      <div class="quote">参考起价：5999.99 美金起 / 人，不含往返中美航班。建议报价格式：每人项目费用、默认标间双人住标准、单人住宿补差价、付款节点、取消政策、餐食标准、交通标准，以及已包含体验费用清单。</div>
 
       <div class="footer-note">
-        <span>价格：确认后报价</span>
+        <span>5999.99 美金起；不含往返中美航班</span>
         <span>xletravels@gmail.com</span>
       </div>
     </section>

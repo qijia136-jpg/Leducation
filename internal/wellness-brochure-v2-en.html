@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -31,6 +31,7 @@
 
       .page {
         width: 210mm;
+        height: 297mm;
         min-height: 297mm;
         margin: 0 auto;
         padding: 18mm;
@@ -38,6 +39,7 @@
         position: relative;
         overflow: hidden;
         break-after: page;
+        page-break-after: always;
       }
 
       .cover {
@@ -109,9 +111,9 @@
       .chapter {
         display: grid;
         grid-template-columns: 42mm 1fr;
-        gap: 10mm;
-        margin-bottom: 10mm;
-        padding-bottom: 7mm;
+        gap: 8mm;
+        margin-bottom: 7mm;
+        padding-bottom: 5mm;
         border-bottom: 1px solid var(--line);
       }
 
@@ -222,13 +224,15 @@
 
       .daily-card {
         display: grid;
-        grid-template-columns: 24mm 1fr;
+        grid-template-columns: 18mm 1fr;
         gap: 3.5mm;
-        margin-bottom: 3mm;
+        margin-bottom: 4mm;
         padding: 3.5mm;
         border: 1px solid var(--line);
         border-radius: 8px;
-        background: #fff;
+        background: rgba(255, 255, 255, 0.94);
+        break-inside: avoid;
+        page-break-inside: avoid;
       }
 
       .daily-card .day-tag {
@@ -237,27 +241,34 @@
       }
 
       .daily-card h3 {
-        margin: 0 0 2mm;
-        font-size: 18px;
+        margin: 0 0 1.4mm;
+        font-size: 16px;
         line-height: 1.2;
       }
 
       .daily-card p {
-        margin: 0 0 2mm;
+        margin: 0 0 1.4mm;
         color: var(--muted);
+        font-size: 12.5px;
+        line-height: 1.42;
       }
 
       .daily-card img {
         width: 100%;
-        height: 16mm;
+        height: 44mm;
         object-fit: cover;
+        object-position: center 38%;
+        background: #f3f0e8;
         border-radius: 6px;
-        margin-bottom: 3mm;
+        margin-bottom: 2mm;
+        opacity: 0.82;
+        filter: saturate(0.9) contrast(0.96);
       }
 
       .daily-card .meta {
         color: #7a6040;
-        font-size: 12px;
+        font-size: 10.2px;
+        line-height: 1.35;
         font-weight: 700;
       }
 
@@ -337,11 +348,11 @@
       <div class="cover-inner">
         <p class="eyebrow">China Mind-Body Wellness Retreat</p>
         <h1>10-Day Cultural Wellness Journey</h1>
-        <p class="cover-subtitle">A premium retreat for diverse international guests, beginning with porcelain-making in Jingdezhen and ending with guests taking home their own ceramics, calligraphy, and ink paintings.</p>
+        <p class="cover-subtitle">A high-end customized wellness journey built around deep Chinese cultural immersion: Shanghai, Jiangnan water towns, Jingdezhen porcelain, contemplative practice, refined dining, and take-home works.</p>
         <div class="cover-meta">
           <div><strong>10 Days</strong><span>Balanced practice, culture, and rest</span></div>
-          <div><strong>Jiangxi</strong><span>Jingdezhen porcelain from the first program day</span></div>
-          <div><strong>Shanghai</strong><span>Arrival, transition, and cosmopolitan ease</span></div>
+          <div><strong>Shanghai · Jiangnan · Jingdezhen</strong><span>Culture, water towns, porcelain, and wellness</span></div>
+          <div><strong>From USD 5,999.99</strong><span>China-US round-trip flights not included</span></div>
         </div>
       </div>
     </section>
@@ -351,7 +362,7 @@
         <div class="chapter-label">Journey Snapshot</div>
         <div>
           <h2>11 Days / 9 Nights Suggested Travel Pattern</h2>
-          <p class="lead">The retreat itself is designed as a 10-day in-China experience, with international flight timing typically creating an 11-day / 9-night guest journey. The final routing should be confirmed after origin city, dates, and airfare are reviewed. Images are for reference only; final arrangements may vary due to routing, weather, supplier availability, and on-site conditions.</p>
+          <p class="lead">The retreat itself is designed as a 10-day in-China experience, with international flight timing typically creating an 11-day / 9-night guest journey. The route begins in the international metropolis of Shanghai, continues to China Jingdezhen, the Porcelain Capital, then enters Zhejiang for wellness practice, Jiangnan water-town scenery, a craft beer experience, West Lake, and return logistics. Images are for reference only; final arrangements may vary due to routing, weather, supplier availability, and on-site conditions.</p>
         </div>
       </div>
 
@@ -361,8 +372,9 @@
           <ul>
             <li>Preferred arrival: Shanghai Pudong International Airport (PVG)</li>
             <li>Alternative arrival: Hangzhou Xiaoshan International Airport (HGH)</li>
-            <li>Recommended departure: Shanghai Pudong (PVG) or Hangzhou (HGH), depending on the confirmed route</li>
-            <li>First program stop: Jingdezhen, Jiangxi, with onward rail or private transfer confirmed after flights</li>
+            <li>Recommended departure: Shanghai Pudong (PVG), with Hangzhou (HGH) as a possible option depending on the confirmed route</li>
+            <li>Day 1: overnight in Shanghai with a Bund and city introduction</li>
+            <li>Day 2: transfer to China Jingdezhen, the Porcelain Capital, by rail or private transfer</li>
             <li>Guests should arrive by afternoon where possible to allow smooth transfer, check-in, and rest</li>
           </ul>
         </article>
@@ -377,7 +389,7 @@
         </article>
       </div>
 
-      <div class="quote">Suggested booking flow: confirm group size, preferred dates, arrival city, room preference, passport nationality, mobility notes, dietary restrictions, and interest level in alcohol-free alternatives.</div>
+      <div class="quote">Starting price: from USD 5,999.99 per person, excluding China-US round-trip flights. Pricing assumes standard twin-share occupancy; single occupancy is available with a supplement.</div>
 
       <div class="footer-note">
         <span>Images are for reference only</span>
@@ -390,7 +402,7 @@
         <div class="chapter-label">Why This Journey</div>
         <div>
           <h2>China, Experienced Slowly</h2>
-          <p class="lead">This retreat is designed for travelers who want more than sightseeing. It offers a cultivated rhythm: porcelain work early enough for firing and packing, quiet mornings, hands-on cultural artistry, graceful excursions, optional rest, and warm human support throughout the journey.</p>
+          <p class="lead">This retreat is designed for travelers who want more than sightseeing. It combines deep Chinese cultural immersion and wellness travel: cosmopolitan Shanghai, porcelain artistry in China Jingdezhen, Taoist-inspired practice in Zhejiang, Jiangnan water-town life, West Lake aesthetics, craft beer, luxury hotels, refined dining, private transfers, and warm human support throughout the journey.</p>
         </div>
       </div>
 
@@ -408,7 +420,7 @@
         <article class="card">
           <span class="badge">Elegant discovery</span>
           <h3>Travel with Texture</h3>
-          <p>West Lake ambience, water-town walks, garden stays, local dining, and craft beer tasting add contrast and pleasure.</p>
+          <p>Shanghai city energy, Jiangnan water-town walks, West Lake ambience, garden stays, local dining, and a half-day craft brewery experience add contrast and pleasure.</p>
         </article>
       </div>
 
@@ -430,6 +442,8 @@
         <span>Porcelain making</span>
         <span>Porcelain painting</span>
         <span>Tea moments</span>
+        <span>Shanghai Bund walk</span>
+        <span>Taoist cultural context</span>
         <span>Water-town walk</span>
         <span>West Lake ambience</span>
         <span>Boutique brewery visit</span>
@@ -447,38 +461,38 @@
         <div class="chapter-label">10-Day Flow</div>
         <div>
           <h2>A Premium Retreat Rhythm</h2>
-          <p class="lead">Inspired by high-end retreat design, the itinerary balances morning practice, curated cultural immersion, rest windows, and light evening integration. Final routing is confirmed after guest preferences, season, weather, and supplier availability are reviewed.</p>
+          <p class="lead">Inspired by high-end retreat design, the itinerary balances arrival ease, curated cultural immersion, several days of wellness practice, rest windows, and light evening integration. Final routing is confirmed after guest preferences, season, weather, and supplier availability are reviewed.</p>
         </div>
       </div>
 
       <div class="itinerary">
         <div class="day-row">
           <strong>Day 1</strong>
-          <div><b>Arrival and Jingdezhen Transfer</b><br>Arrive via Shanghai or Hangzhou, then continue to Jingdezhen, Jiangxi. Check in, enjoy welcome tea, and preview the porcelain-making process so the first crafted works can enter the firing timeline early.</div>
+          <div><b>Shanghai Arrival, Bund and City Welcome</b><br>Arrive in the international metropolis of Shanghai. Check in, rest, then begin with a refined Bund and city introduction that helps guests transition into China with comfort and style.</div>
         </div>
         <div class="day-row">
           <strong>Day 2</strong>
-          <div><b>Jingdezhen Porcelain Making</b><br>Work with clay, vessel forms, and artisan guidance in Jingdezhen. Starting porcelain first allows time for finishing, firing, and travel packing before departure.</div>
+          <div><b>China Jingdezhen, the Porcelain Capital</b><br>Transfer to China Jingdezhen for porcelain shaping, painting, and kiln handoff. Starting porcelain early allows time for finishing, firing, and travel packing before departure.</div>
         </div>
         <div class="day-row">
           <strong>Day 3</strong>
-          <div><b>Meditation and Calligraphy</b><br>Begin with breathwork and seated meditation. A calligraphy mentor introduces brush, ink, posture, and rhythm, turning Chinese characters into a meditative practice.</div>
+          <div><b>Arrive in Zhejiang and Begin Wellness Practice</b><br>Enter a quieter Jiangnan setting in Zhejiang. The retreat rhythm begins with breathwork, seated meditation, tea, and Taoist cultural context connected to Tongbai Palace traditions.</div>
         </div>
         <div class="day-row">
-          <strong>Days 4-5</strong>
-          <div><b>West Lake, Ink Painting and Water Town</b><br>Move from classical West Lake ambience into Chinese ink painting, then explore canal lanes, stone bridges, courtyards, and old-town textures.</div>
+          <strong>Days 4-6</strong>
+          <div><b>Practice, Calligraphy, Ink Painting and Brewery Half-Day</b><br>Spend several days in Zhejiang with meditation, gentle movement, calligraphy, ink painting, and a half-day craft brewery visit with tasting or alcohol-free alternatives.</div>
         </div>
         <div class="day-row">
-          <strong>Days 6-7</strong>
-          <div><b>Craft Brewery and Gentle Integration</b><br>Visit a boutique brewery to understand contemporary craft culture in China, then return to gentle movement, tea, and cultural deepening.</div>
+          <strong>Day 7</strong>
+          <div><b>Jiangnan Water Town</b><br>After the core practice days, explore canal lanes, stone bridges, courtyards, waterside textures, and slow local life in a Jiangnan water town.</div>
         </div>
         <div class="day-row">
           <strong>Days 8-9</strong>
-          <div><b>Artwork Review, Closing Circle and Farewell Dinner</b><br>Morning meditation, personal time, optional cultural deepening, review of ceramics, calligraphy, and ink works, and a warm closing dinner.</div>
+          <div><b>West Lake, Artwork Review and Closing Dinner</b><br>Visit West Lake after the water-town day, then review ceramics, calligraphy, and ink works before a warm closing dinner and Shanghai return coordination.</div>
         </div>
         <div class="day-row">
           <strong>Day 10</strong>
-          <div><b>Departure with Personal Works</b><br>Departure coordination, protective packing, handover of personal porcelain, calligraphy, and ink paintings, and support for onward travel questions.</div>
+          <div><b>Return Departure with Personal Works</b><br>Departure coordination, protective packing, handover of personal porcelain, calligraphy, and ink paintings, and support for onward travel questions.</div>
         </div>
       </div>
 
@@ -500,19 +514,19 @@
       <div class="daily-card">
         <div class="day-tag">Day 1</div>
         <div>
-          <img src="../assets/itinerary/day-01.png" alt="Diverse international guests making porcelain in a Jingdezhen-style studio">
-          <h3>Jingdezhen Arrival and Porcelain Studio Orientation</h3>
-          <p>Guests arrive via Shanghai or Hangzhou and continue to Jingdezhen, Jiangxi. The first program moment introduces clay, vessel forms, porcelain culture, and the firing timeline, so personal works can begin early enough to be finished and packed by departure.</p>
-          <div class="meta">Meals: welcome tea / light dinner subject to arrival time. Stay: premium hotel or boutique retreat stay in or near Jingdezhen.</div>
+          <img src="../assets/itinerary/day-01-shanghai.png" alt="Diverse international guests beginning the journey on Shanghai Bund">
+          <h3>Shanghai Arrival, Bund Walk and City Welcome</h3>
+          <p>Guests arrive in Shanghai, check in, and begin the journey with a composed city introduction: the Bund, contemporary Shanghai energy, and a gentle welcome that sets a premium international tone before moving into deeper Chinese cultural immersion.</p>
+          <div class="meta">Meals: welcome tea / light dinner subject to arrival time. Stay: five-star luxury or near-five-star hotel in Shanghai.</div>
         </div>
       </div>
       <div class="daily-card">
         <div class="day-tag">Day 2</div>
         <div>
           <img src="../assets/itinerary/day-02.png" alt="Diverse guests painting blue and white porcelain in a warm studio">
-          <h3>Jingdezhen Porcelain Shaping, Painting, and Kiln Handoff</h3>
-          <p>In a guided studio session, guests work with clay, hand pressure, vessel proportion, and accessible blue-and-white painting motifs. Selected works are handed to the studio for firing, finishing, and protective packing.</p>
-          <div class="meta">Meals: breakfast, lunch, dinner. Stay: premium hotel or boutique retreat stay in or near Jingdezhen.</div>
+          <h3>China Jingdezhen, the Porcelain Capital</h3>
+          <p>Guests transfer to China Jingdezhen, the Porcelain Capital, for a guided studio session. They work with clay, vessel proportion, hand pressure, and accessible blue-and-white painting motifs. Selected works are handed to the studio for firing, finishing, and protective packing.</p>
+          <div class="meta">Meals: breakfast, light-luxury lunch, light-luxury dinner. Stay: five-star luxury or near-five-star hotel in or near Jingdezhen.</div>
         </div>
       </div>
 
@@ -527,35 +541,26 @@
         <div class="chapter-label">Daily Detail</div>
         <div>
           <h2>Practice, Brushwork and Landscape</h2>
-          <p class="lead">After the Jingdezhen studio work enters the firing process, the journey turns toward meditation, calligraphy, ink painting, and slow scenic discovery.</p>
+          <p class="lead">After the Jingdezhen studio work enters the firing process, the journey moves into Zhejiang for Taoist-inspired practice, calligraphy, ink painting, and quiet integration.</p>
         </div>
       </div>
 
       <div class="daily-card">
         <div class="day-tag">Day 3</div>
         <div>
-          <img src="../assets/itinerary/day-03.png" alt="Diverse guests practicing Chinese brush art in an elegant studio">
-          <h3>Seated Meditation and Calligraphy</h3>
-          <p>The morning introduces breath, posture, and quiet attention. In the calligraphy session, guests learn the relationship between brush pressure, ink flow, body alignment, and rhythm, then keep their own calligraphy work as part of the final take-home set.</p>
-          <div class="meta">Meals: breakfast, lunch, dinner. Stay: premium hotel or boutique retreat stay.</div>
+          <img src="../assets/itinerary/day-03-zhejiang-tongbai.png" alt="Diverse guests practicing meditation in a Zhejiang Taoist-inspired retreat setting">
+          <h3>Zhejiang Arrival and Tongbai-Inspired Wellness Practice</h3>
+          <p>Guests arrive in Zhejiang and enter a quieter Jiangnan setting. The day introduces breath, posture, seated meditation, tea, and Taoist cultural context connected to Tongbai Palace traditions, helping the group shift from travel into a steady retreat rhythm.</p>
+          <div class="meta">Meals: breakfast, light-luxury lunch, light-luxury dinner. Stay: five-star luxury or near-five-star hotel.</div>
         </div>
       </div>
       <div class="daily-card">
         <div class="day-tag">Day 4</div>
         <div>
-          <img src="../assets/itinerary/day-04.png" alt="Diverse travelers walking through West Lake style scenery">
-          <h3>West Lake Ambience and Chinese Ink Painting</h3>
-          <p>A slow scenic excursion introduces the classical mood of water, bridges, gardens, and layered views. The afternoon ink painting workshop translates that atmosphere into brushwork, empty space, tonal gradation, and mountain-water composition.</p>
-          <div class="meta">Meals: breakfast, lunch, dinner. Stay: premium hotel or boutique retreat stay.</div>
-        </div>
-      </div>
-      <div class="daily-card">
-        <div class="day-tag">Day 5</div>
-        <div>
-          <img src="../assets/itinerary/day-05.png" alt="Diverse travelers walking through a Chinese water town">
-          <h3>Water Town Ancient Lanes and Canal Walk</h3>
-          <p>Guests explore a Chinese water-town setting with canals, stone bridges, courtyards, local textures, and small shops. The visit is paced for observation and photography rather than rushed sightseeing.</p>
-          <div class="meta">Meals: breakfast, lunch, dinner. Stay: premium hotel or boutique retreat stay.</div>
+          <img src="../assets/itinerary/day-03.png" alt="Diverse guests practicing Chinese brush art in an elegant studio">
+          <h3>Calligraphy Meditation and Chinese Ink Painting</h3>
+          <p>A calligraphy mentor introduces brush pressure, ink flow, body alignment, and rhythm, turning Chinese characters into a meditative practice. The ink painting session translates stillness into brushwork, empty space, tonal gradation, and mountain-water composition.</p>
+          <div class="meta">Meals: breakfast, light-luxury lunch, light-luxury dinner. Stay: five-star luxury or near-five-star hotel.</div>
         </div>
       </div>
 
@@ -569,36 +574,62 @@
       <div class="chapter">
         <div class="chapter-label">Daily Detail</div>
         <div>
-          <h2>Scenery, Craft, and Contemporary Taste</h2>
-          <p class="lead">The second half of the program adds contrast: water-town atmosphere, modern craft culture, spacious rest, and a thoughtful close.</p>
+          <h2>Practice and Contemporary Taste</h2>
+          <p class="lead">The Zhejiang retreat section keeps a slower wellness rhythm, then adds a half-day brewery experience for contrast and social ease.</p>
         </div>
       </div>
 
       <div class="daily-card">
-        <div class="day-tag">Day 6</div>
+        <div class="day-tag">Day 5</div>
+        <div>
+          <img src="../assets/itinerary/day-07.png" alt="Diverse guests practicing gentle movement in a Chinese garden retreat">
+          <h3>Gentle Movement and Taoist Cultural Deepening</h3>
+          <p>Morning meditation and light movement help the group integrate the travel rhythm. The afternoon can deepen Taoist cultural learning, tea practice, journaling, or an additional art session depending on guest energy.</p>
+          <div class="meta">Meals: breakfast, light-luxury lunch, light-luxury dinner. Stay: five-star luxury or near-five-star hotel.</div>
+        </div>
+      </div>
+
+      <div class="daily-card">
+          <div class="day-tag">Day 6</div>
         <div>
           <img src="../assets/itinerary/day-06.png" alt="Diverse guests visiting a boutique craft brewery">
           <h3>Boutique Brewery Visit and Craft Beer Tasting</h3>
           <p>A guided brewery visit introduces contemporary Chinese craft culture: ingredients, fermentation, production flow, and tasting language. Non-alcoholic alternatives can be arranged so the activity remains inclusive and relaxed.</p>
-          <div class="meta">Meals: breakfast, lunch, tasting/light dinner. Stay: premium hotel or boutique retreat stay.</div>
+          <div class="meta">Meals: breakfast, light-luxury lunch, tasting / light-luxury dinner. Stay: five-star luxury or near-five-star hotel in Zhejiang.</div>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        <span>Images are for reference only</span>
+        <span>Route and weather adjustments may apply</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">Daily Detail</div>
+        <div>
+          <h2>Jiangnan Water Town and West Lake</h2>
+          <p class="lead">After the core practice days, the route moves first into Jiangnan water-town scenery, then to West Lake for a classical Chinese landscape mood.</p>
+        </div>
+      </div>
+
+      <div class="daily-card">
+          <div class="day-tag">Day 7</div>
+          <div>
+          <img src="../assets/itinerary/day-05.png" alt="Diverse travelers walking through a Chinese water town">
+          <h3>Jiangnan Water Town Ancient Lanes and Canal Walk</h3>
+          <p>After the core practice days, guests explore a Jiangnan water-town setting with canals, stone bridges, courtyards, local textures, and small shops. The visit is paced for observation and photography rather than rushed sightseeing.</p>
+          <div class="meta">Meals: breakfast, light-luxury lunch, light-luxury dinner. Stay: five-star luxury or near-five-star hotel in Zhejiang.</div>
         </div>
       </div>
       <div class="daily-card">
-        <div class="day-tag">Day 7</div>
-        <div>
-          <img src="../assets/itinerary/day-07.png" alt="Diverse guests practicing gentle movement in a Chinese garden retreat">
-          <h3>Gentle Movement and Cultural Deepening</h3>
-          <p>Morning meditation and light movement help the group integrate the travel rhythm. The afternoon can be used for tea, quiet rest, an additional art session, or a light local visit depending on guest energy.</p>
-          <div class="meta">Meals: breakfast, lunch, dinner. Stay: premium hotel or boutique retreat stay.</div>
-        </div>
-      </div>
-      <div class="daily-card">
-        <div class="day-tag">Day 8</div>
-        <div>
-          <img src="../assets/itinerary/day-08.png" alt="Diverse guests reviewing tea, ceramics, calligraphy and ink paintings">
-          <h3>Artwork Review and Elegant Rest</h3>
-          <p>Guests review ceramics status, calligraphy, and ink paintings with the team. This day keeps enough rest space for a premium rhythm while making sure personal works are ready for final handover.</p>
-          <div class="meta">Meals: breakfast, lunch, dinner. Stay: premium hotel or boutique retreat stay.</div>
+          <div class="day-tag">Day 8</div>
+          <div>
+          <img src="../assets/itinerary/day-08-westlake.png" alt="Diverse travelers visiting West Lake after a wellness retreat">
+          <h3>West Lake Ambience and Artwork Review</h3>
+          <p>A slow West Lake excursion introduces the classical mood of water, bridges, gardens, and layered views. Later, guests review ceramics status, calligraphy, and ink paintings with the team before final handover.</p>
+          <div class="meta">Meals: breakfast, light-luxury lunch, light-luxury dinner. Stay: five-star luxury or near-five-star hotel in Zhejiang.</div>
         </div>
       </div>
 
@@ -622,16 +653,16 @@
         <div>
           <img src="../assets/itinerary/day-09.png" alt="Diverse guests sharing tea and artwork at a warm closing table">
           <h3>Integration, Closing Circle, and Farewell Dinner</h3>
-          <p>The final full day is calm and ceremonial. Guests share reflections, enjoy personal time, and gather for a farewell dinner that closes the retreat without rushing the emotional transition.</p>
-          <div class="meta">Meals: breakfast, lunch, farewell dinner. Stay: premium hotel or boutique retreat stay.</div>
+          <p>The final full day is calm and ceremonial. Guests share reflections, enjoy personal time, confirm protective packing for their works, and gather for a farewell dinner that closes the retreat without rushing the emotional transition.</p>
+          <div class="meta">Meals: breakfast, light-luxury lunch, farewell dinner. Stay: five-star luxury or near-five-star hotel in Shanghai or final confirmed city.</div>
         </div>
       </div>
       <div class="daily-card">
-        <div class="day-tag">Day 10-11</div>
+        <div class="day-tag">Day 10</div>
         <div>
           <img src="../assets/itinerary/day-10.png" alt="Diverse travelers departing with packed porcelain, calligraphy and ink paintings">
           <h3>Departure with Personal Works</h3>
-          <p>The team assists with check-out, transfer, rail or airport timing, luggage movement, and onward travel questions. Guests leave with protected porcelain pieces, rolled calligraphy, and ink paintings; for long-haul flights, arrival home may be the following calendar day.</p>
+          <p>The team assists with check-out, airport timing, luggage movement, and onward travel questions. Guests leave with protected porcelain pieces, rolled calligraphy, and ink paintings; for long-haul flights, arrival home may be the following calendar day.</p>
           <div class="meta">Meals: breakfast on Day 10 where hotel timing allows. Day 11 is an international flight buffer.</div>
         </div>
       </div>
@@ -647,7 +678,7 @@
         <div class="chapter-label">Services</div>
         <div>
           <h2>Reference Inclusions and Booking Notes</h2>
-          <p class="lead">Like the reference study-tour brochure, final pricing should be issued after dates, group size, hotel level, rooming, flight routes, and supplier availability are confirmed.</p>
+          <p class="lead">Starting price is from USD 5,999.99 per person, excluding China-US round-trip flights. Pricing assumes standard twin-share occupancy; single occupancy requires a supplement. Final quotation should be issued after dates, group size, hotel level, rooming, route, and supplier availability are confirmed.</p>
         </div>
       </div>
 
@@ -655,10 +686,10 @@
         <article class="card tint">
           <h3>Usually Included</h3>
           <ul>
-            <li>Premium hotel or boutique retreat stay in Jiangxi, Zhejiang and Shanghai, or same class</li>
-            <li>Breakfast and specified lunches/dinners during the program</li>
+            <li>Five-star luxury hotels or near-five-star standard hotels in Shanghai, China Jingdezhen, and Zhejiang</li>
+            <li>Light-luxury restaurants and selected high-end restaurants, including Black Pearl guide-style dining where feasible</li>
             <li>Listed cultural workshops, basic materials, and reservation coordination</li>
-            <li>Local private transfer or arranged ground transportation during confirmed activities</li>
+            <li>Fully private customized itinerary with private car service; business-class rail seats if high-speed rail is required</li>
             <li>Bilingual coordination, local host support, and guest communication before arrival</li>
             <li>Entry or activity fees specifically listed in the final itinerary</li>
           </ul>
@@ -666,9 +697,9 @@
         <article class="card">
           <h3>Usually Not Included</h3>
           <ul>
-            <li>International or domestic flights, airport taxes, and baggage fees</li>
+            <li>China-US round-trip flights, airport taxes, and baggage fees</li>
             <li>Passport, visa, China entry documentation, and travel insurance unless stated</li>
-            <li>Single-room supplement or room upgrades beyond the confirmed quote</li>
+            <li>Single occupancy supplement or room upgrades beyond the confirmed twin-share standard</li>
             <li>Personal expenses, shopping, laundry, minibar, and optional spa services</li>
             <li>Alcohol beyond the arranged tasting and any services not listed in writing</li>
             <li>Images are for reference only; actual arrangements are subject to route, weather, supplier availability, and on-site conditions</li>
@@ -677,10 +708,10 @@
         </article>
       </div>
 
-      <div class="quote">Quotation format recommended: program price per person, single supplement, payment schedule, cancellation terms, room category, meal plan, transport standard, and a clear list of included activity fees.</div>
+      <div class="quote">Reference starting price: from USD 5,999.99 per person, excluding China-US round-trip flights. Quotation format recommended: program price per person, twin-share room standard, single occupancy supplement, payment schedule, cancellation terms, dining standard, transport standard, and a clear list of included activity fees.</div>
 
       <div class="footer-note">
-        <span>Price: to be quoted after confirmation</span>
+        <span>From USD 5,999.99; China-US round-trip flights not included</span>
         <span>Contact: xletravels@gmail.com</span>
       </div>
     </section>
