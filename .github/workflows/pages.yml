@@ -32,8 +32,13 @@ jobs:
         shell: bash
         run: |
           rm -rf _site
-          mkdir -p _site/internal/output
-          cp -R index.html assets wellness-qa camp _site/
+          mkdir -p _site/internal/output _site/camp
+          cp -R index.html assets wellness-qa _site/
+          cp camp/China_Youth_AI_Robotics_Camp_Admissions_Brochure_No_University_Logos.pdf _site/camp/
+          cp camp/China_Youth_Cultural_Exchange_Camp_Admissions_Brochure_Clean.pdf _site/camp/
+          cp camp/China_Wellness_Cultural_Immersion_Retreat_10-Day_Program.pdf _site/camp/
+          cp camp/China_Wellness_Cultural_Immersion_Retreat_10-Day_Program_EN.pdf _site/camp/
+          cp camp/China_Wellness_Cultural_Immersion_Retreat_10-Day_Program_ZH.pdf _site/camp/
           cp .nojekyll _site/.nojekyll
           cp internal/output/wellness-frequent-qa.pdf _site/internal/output/wellness-frequent-qa.pdf
 
