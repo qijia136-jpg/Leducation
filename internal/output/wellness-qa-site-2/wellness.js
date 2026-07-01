@@ -262,7 +262,7 @@ const retreatAnswers = [
     keywords: ["airport", "pvg", "sha", "arrival", "departure", "flight", "fly", "shanghai pudong"],
     html: `
       <p>The recommended arrival airport is Shanghai Pudong International Airport (PVG). The exact arrival and departure city should be confirmed based on origin city, flight pricing, travel dates, route, and final hotel arrangements.</p>
-      <p>China-US round-trip flights are not included. Please confirm itinerary dates and transfer timing before purchasing flights.</p>
+      <p>China-US round-trip flights are not included. After the itinerary is confirmed, guests should book China round-trip flights as soon as possible to reduce the risk of limited seat availability, sharply rising fares, or related losses.</p>
     `
   },
   {
@@ -270,7 +270,8 @@ const retreatAnswers = [
     keywords: ["visa", "passport", "entry", "document", "l visa", "invitation", "embassy", "consulate"],
     html: `
       <p>Guests are responsible for confirming China entry requirements based on passport nationality and departure country.</p>
-      <p>Many international travelers may need a Chinese tourist visa. The team can provide a supporting itinerary or invitation letter after confirmed booking, but cannot guarantee visa outcomes. Always verify requirements with official sources.</p>
+      <p>Many international travelers may need a Chinese tourist visa. The team only assists by providing the itinerary schedule and invitation letter when appropriate. If confirmed booking information is needed for visa materials, guests should understand that visa refusal may still create non-refundable costs or other losses that must be borne by the guest according to the booking terms.</p>
+      <p>The team cannot guarantee visa outcomes. Always verify requirements with official sources before making commitments.</p>
     `
   },
   {
