@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>身心疗愈文化沉浸营 - 中文小册子</title>
+    <style>
+      :root {
+        --ink: #20211e;
+        --muted: #626b61;
+        --line: #d9ded2;
+        --paper: #fffdf8;
+        --soft: #f4f0e6;
+        --leaf: #2f6b4f;
+        --tea: #9a6f39;
+        --clay: #bf6d48;
+        --night: #162017;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Arial, "Microsoft YaHei", sans-serif;
+        line-height: 1.58;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 18mm;
+        background: var(--paper);
+        position: relative;
+        overflow: hidden;
+        break-after: page;
+      }
+
+      .cover {
+        display: flex;
+        align-items: flex-end;
+        min-height: 297mm;
+        padding: 0;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(12, 20, 15, 0.88), rgba(12, 20, 15, 0.52), rgba(12, 20, 15, 0.16)),
+          url("../assets/hero-wellness-luxury.png");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .cover-inner {
+        width: 100%;
+        padding: 30mm 18mm;
+      }
+
+      .eyebrow {
+        margin: 0 0 8mm;
+        color: #dbece1;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 154mm;
+        margin: 0 0 8mm;
+        font-size: 47px;
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      .cover-subtitle {
+        max-width: 136mm;
+        margin: 0 0 14mm;
+        font-size: 18px;
+      }
+
+      .cover-meta,
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 4mm;
+      }
+
+      .cover-meta {
+        max-width: 162mm;
+      }
+
+      .cover-meta div {
+        border: 1px solid rgba(255, 255, 255, 0.36);
+        border-radius: 8px;
+        padding: 4mm;
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .cover-meta strong,
+      .cover-meta span {
+        display: block;
+      }
+
+      .cover-meta span {
+        margin-top: 1mm;
+        color: #e7f1ea;
+        font-size: 13px;
+      }
+
+      .chapter {
+        display: grid;
+        grid-template-columns: 42mm 1fr;
+        gap: 10mm;
+        margin-bottom: 10mm;
+        padding-bottom: 7mm;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .chapter-label {
+        color: var(--tea);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 0 0 4mm;
+        font-size: 28px;
+        line-height: 1.16;
+      }
+
+      .lead {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5mm;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 5mm;
+        background: #fff;
+      }
+
+      .card.tint {
+        background: #f7fbf6;
+        border-color: rgba(47, 107, 79, 0.38);
+      }
+
+      .card h3 {
+        margin: 0 0 3mm;
+        color: var(--night);
+        font-size: 18px;
+        line-height: 1.22;
+      }
+
+      .card p {
+        margin: 0 0 3mm;
+        color: var(--muted);
+      }
+
+      .card ul,
+      .plain-list {
+        margin: 0;
+        padding-left: 5mm;
+      }
+
+      .badge {
+        display: inline-block;
+        margin-bottom: 3mm;
+        padding: 1.2mm 2.4mm;
+        border-radius: 999px;
+        background: #ecf5ef;
+        color: var(--leaf);
+        font-size: 11px;
+        font-weight: 800;
+      }
+
+      .quote {
+        margin: 8mm 0;
+        padding: 6mm;
+        border-left: 4px solid var(--clay);
+        background: #fff7ed;
+        color: #4a3629;
+        font-size: 17px;
+        font-weight: 700;
+      }
+
+      .itinerary {
+        display: grid;
+        gap: 3mm;
+      }
+
+      .day-row {
+        display: grid;
+        grid-template-columns: 28mm 1fr;
+        gap: 5mm;
+        align-items: start;
+        padding: 4mm;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .day-row strong {
+        color: var(--leaf);
+      }
+
+      .daily-card {
+        display: grid;
+        grid-template-columns: 24mm 1fr;
+        gap: 5mm;
+        margin-bottom: 4mm;
+        padding: 5mm;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .daily-card .day-tag {
+        color: var(--leaf);
+        font-weight: 900;
+      }
+
+      .daily-card h3 {
+        margin: 0 0 2mm;
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      .daily-card p {
+        margin: 0 0 2mm;
+        color: var(--muted);
+      }
+
+      .daily-card .meta {
+        color: #7a6040;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .service-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5mm;
+      }
+
+      .activity-cloud {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2mm;
+      }
+
+      .activity-cloud span {
+        border-radius: 999px;
+        border: 1px solid rgba(47, 107, 79, 0.25);
+        padding: 1.5mm 2.5mm;
+        color: var(--leaf);
+        background: #fff;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .footer-note {
+        position: absolute;
+        left: 18mm;
+        right: 18mm;
+        bottom: 10mm;
+        display: flex;
+        justify-content: space-between;
+        gap: 8mm;
+        border-top: 1px solid var(--line);
+        padding-top: 4mm;
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .cta {
+        margin-top: 8mm;
+        padding: 7mm;
+        border-radius: 10px;
+        background: var(--night);
+        color: #fff;
+      }
+
+      .cta h3 {
+        margin: 0 0 3mm;
+        font-size: 21px;
+      }
+
+      .cta p {
+        margin: 0;
+        color: #dce9df;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .page {
+          margin: 0;
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <div class="cover-inner">
+        <p class="eyebrow">China Mind-Body Wellness Retreat</p>
+        <h1>10 天身心疗愈文化沉浸之旅</h1>
+        <p class="cover-subtitle">面向多元国际高端客群，以浙江与上海为主要场景，融合打坐冥想、书法、国画、瓷器制作与画瓷、水城古镇、西湖意境、啤酒厂参观与精酿品鉴。</p>
+        <div class="cover-meta">
+          <div><strong>10 天</strong><span>练习、文化与休整的平衡</span></div>
+          <div><strong>浙江</strong><span>水乡、茶、手作与慢生活</span></div>
+          <div><strong>上海</strong><span>抵达、转换与国际化便利</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">行程速览</div>
+        <div>
+          <h2>建议 11 天 9 晚旅行节奏</h2>
+          <p class="lead">营地核心体验为中国境内 10 天。因国际航班跨时区与抵离时间安排，客户实际旅行通常可按 11 天 9 晚沟通。最终航班、酒店与线路以确认报价为准。</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <article class="card tint">
+          <h3>航班建议</h3>
+          <ul>
+            <li>首选抵达：上海浦东国际机场 PVG</li>
+            <li>备选抵达：杭州萧山国际机场 HGH</li>
+            <li>建议离境：上海浦东 PVG 或杭州 HGH，视最终线路确认</li>
+            <li>建议尽量选择下午前抵达，方便接机、入住、欢迎茶与休整</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>后勤与接待</h3>
+          <ul>
+            <li>确认航班后可安排机场接待与专车转运</li>
+            <li>建议每位客人携带一件托运行李与一件随身行李，方便转场</li>
+            <li>报名时收集饮食、过敏、行动能力、健康注意事项</li>
+            <li>签证或中国入境要求需按客人护照国籍单独确认</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="quote">报名信息建议一次性收集：人数、日期、抵达城市、房型偏好、护照国籍、行动能力、饮食限制、是否需要非酒精替代饮品。</div>
+
+      <div class="footer-note">
+        <span>航班建议仅供规划使用</span>
+        <span>最终以航空公司班期与票价为准</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">项目亮点</div>
+        <div>
+          <h2>把中国文化慢下来体验</h2>
+          <p class="lead">这不是普通观光团，而是一段有节奏的文化疗愈旅程：上午身心练习，下午精选文化体验，中间保留休整时间，晚上用轻社交和分享完成整合。</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <article class="card tint">
+          <span class="badge">身心节奏</span>
+          <h3>从安静开始</h3>
+          <p>打坐冥想、呼吸练习、茶与书写帮助客人从国际旅行节奏切换到疗愈营节奏。</p>
+        </article>
+        <article class="card">
+          <span class="badge">东方艺术</span>
+          <h3>用手理解文化</h3>
+          <p>书法、国画、瓷器制作和画瓷让文化体验变得可触摸、可带走、可回忆。</p>
+        </article>
+        <article class="card">
+          <span class="badge">轻奢探索</span>
+          <h3>有质感的游历</h3>
+          <p>西湖意境、水城古镇、花园式住宿、地方餐饮与精酿啤酒体验，形成传统与当代的对照。</p>
+        </article>
+      </div>
+
+      <div class="chapter" style="margin-top: 12mm;">
+        <div class="chapter-label">核心体验</div>
+        <div>
+          <h2>中国传统文化，以国际客人能进入的方式呈现</h2>
+          <p class="lead">每一项体验都避免过度专业化，以美感、参与感和舒适度为优先。</p>
+        </div>
+      </div>
+
+      <div class="activity-cloud">
+        <span>打坐冥想</span>
+        <span>呼吸练习</span>
+        <span>书法</span>
+        <span>国画 / 水墨</span>
+        <span>做瓷器</span>
+        <span>画瓷器</span>
+        <span>茶体验</span>
+        <span>水城古镇</span>
+        <span>西湖意境</span>
+        <span>啤酒厂参观</span>
+        <span>精酿啤酒品鉴</span>
+      </div>
+
+      <div class="footer-note">
+        <span>身心疗愈文化沉浸营 · 中文小册子</span>
+        <span>xletravels@gmail.com</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">每日行程</div>
+        <div>
+          <h2>10 天高端疗愈营安排</h2>
+          <p class="lead">参考高端疗愈营的日程逻辑：每天有固定晨间练习、精选文化体验、休整窗口和轻量晚间整合。实际日期和供应商以最终确认单为准。</p>
+        </div>
+      </div>
+
+      <div class="itinerary">
+        <div class="day-row">
+          <strong>Day 1</strong>
+          <div><b>抵达与私享安顿</b><br>抵达上海或浙江，安排接机与专车转运。入住后进行欢迎茶、行程说明、个人偏好复核与安静休整。</div>
+        </div>
+        <div class="day-row">
+          <strong>Day 2</strong>
+          <div><b>打坐冥想与书法</b><br>上午进行呼吸与打坐练习。书法导师介绍笔、墨、坐姿、运笔与节奏，让汉字书写成为一种静心体验。</div>
+        </div>
+        <div class="day-row">
+          <strong>Day 3</strong>
+          <div><b>西湖意境与国画</b><br>安排西湖氛围慢行或同等级景观体验。国画课程引导客人理解水墨、留白、线条和山水意境。</div>
+        </div>
+        <div class="day-row">
+          <strong>Days 4-5</strong>
+          <div><b>瓷器制作与画瓷</b><br>体验瓷土成型、器物观察和画瓷。课程以参与和美感为主，不要求客人有艺术基础。</div>
+        </div>
+        <div class="day-row">
+          <strong>Days 6-7</strong>
+          <div><b>水城古镇与精酿体验</b><br>漫步中国水城古镇，观察石桥、河道、院落与街巷肌理。随后参观精品啤酒厂，安排精酿品鉴；可提供非酒精替代选择。</div>
+        </div>
+        <div class="day-row">
+          <strong>Days 8-9</strong>
+          <div><b>整合与高级休整</b><br>晨间冥想、轻步行、个人时间、小组分享，可选文化加深体验或周边轻探访。</div>
+        </div>
+        <div class="day-row">
+          <strong>Day 10</strong>
+          <div><b>离营与后续支持</b><br>办理离店、安排送站或送机，收集反馈，并提供后续旅行咨询。</div>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        <span>框架版行程 · 需确认后报价</span>
+        <span>浙江 / 上海</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">每日细节</div>
+        <div>
+          <h2>参访与体验说明</h2>
+          <p class="lead">以下文字可直接用于客户沟通：说明每一天为什么这样安排、客人现场会做什么，以及这一天的体验感。</p>
+        </div>
+      </div>
+
+      <div class="daily-card">
+        <div class="day-tag">第 1 天</div>
+        <div>
+          <h3>抵达、欢迎茶与行程说明</h3>
+          <p>确认航班后安排机场或车站接待。第一晚刻意放慢节奏：办理入住、欢迎茶、简短行程说明、整理行李与倒时差。团队同步复核饮食、步行强度、过敏和第二天集合时间。</p>
+          <div class="meta">餐食：欢迎茶 / 视抵达时间安排简餐。住宿：高端酒店或精品疗愈型住宿。</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">第 2 天</div>
+        <div>
+          <h3>打坐冥想与书法</h3>
+          <p>上午从呼吸、坐姿和安静专注开始。书法体验中，导师会讲解笔压、墨色、身体姿态和节奏，让外国客人通过手的动作进入中国文化，而不是追求“写得像不像”。</p>
+          <div class="meta">餐食：早餐、午餐、晚餐。住宿：高端酒店或精品疗愈型住宿。</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">第 3 天</div>
+        <div>
+          <h3>西湖意境与国画水墨</h3>
+          <p>安排西湖氛围的慢行体验，感受水面、桥、园林、远山和层次感。下午国画课程把这种意境转化为笔墨、留白、浓淡和山水构图，帮助客人理解中国审美中的“空”和“静”。</p>
+          <div class="meta">餐食：早餐、午餐、晚餐。住宿：高端酒店或精品疗愈型住宿。</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">第 4 天</div>
+        <div>
+          <h3>瓷器成型与泥土手作</h3>
+          <p>进入瓷器工作室或同等级手作空间，了解泥土如何成为器物、表面和记忆。课程适合零基础客人，以成型体验、器物观察和陶瓷文化说明为主。</p>
+          <div class="meta">餐食：早餐、午餐、晚餐。住宿：高端酒店或精品疗愈型住宿。</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">第 5 天</div>
+        <div>
+          <h3>画瓷、茶与书写反思</h3>
+          <p>客人在瓷面上绘制山水、花草或个人符号。当天安排茶与书写时间，把“亲手做一件器物”与整段身心疗愈营主题连接起来，形成可带走的文化记忆。</p>
+          <div class="meta">餐食：早餐、午餐、晚餐。住宿：高端酒店或精品疗愈型住宿。</div>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        <span>每日细节 1 / 2</span>
+        <span>身心疗愈与文化沉浸</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">每日细节</div>
+        <div>
+          <h2>水城、手作与当代风味</h2>
+          <p class="lead">后半段加入水城古镇、当代精酿文化、充分休整和有仪式感的收束，让行程不只是密集参观，而是有呼吸的旅程。</p>
+        </div>
+      </div>
+
+      <div class="daily-card">
+        <div class="day-tag">第 6 天</div>
+        <div>
+          <h3>水城古镇与运河漫步</h3>
+          <p>走进中国水城古镇，看河道、石桥、院落、街巷肌理和地方小店。参访节奏以观察、拍摄和轻交流为主，不做赶场式观光。</p>
+          <div class="meta">餐食：早餐、午餐、晚餐。住宿：高端酒店或精品疗愈型住宿。</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">第 7 天</div>
+        <div>
+          <h3>啤酒厂参观与精酿品鉴</h3>
+          <p>参观精品啤酒厂，了解原料、发酵、生产流程和精酿品鉴语言。可按客人需求安排非酒精替代饮品，让活动保持轻松、包容和社交友好。</p>
+          <div class="meta">餐食：早餐、午餐、品鉴 / 轻晚餐。住宿：高端酒店或精品疗愈型住宿。</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">第 8 天</div>
+        <div>
+          <h3>轻运动与文化加深</h3>
+          <p>上午以冥想和轻柔身体练习整合前几天的旅行节奏。下午可根据客人状态安排艺术加深、茶、休整型体验或周边轻探访。</p>
+          <div class="meta">餐食：早餐、午餐、晚餐。住宿：高端酒店或精品疗愈型住宿。</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">第 9 天</div>
+        <div>
+          <h3>整合、结营分享与告别晚宴</h3>
+          <p>最后一个完整日保持安静和仪式感。客人整理手作作品、分享体验、保留个人时间，并以告别晚宴完成从疗愈营回到日常生活的过渡。</p>
+          <div class="meta">餐食：早餐、午餐、告别晚宴。住宿：高端酒店或精品疗愈型住宿。</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">第 10-11 天</div>
+        <div>
+          <h3>离营转运与国际返程</h3>
+          <p>团队协助退房、送站或送机、行李动线和后续旅行问题。长途国际航班可能在第 11 个自然日抵达目的地，因此客户沟通中可把第 11 天作为返程缓冲日。</p>
+          <div class="meta">餐食：第 10 天视酒店时间含早餐。第 11 天为国际航班缓冲日。</div>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        <span>每日细节 2 / 2</span>
+        <span>最终线路以日期与供应商确认为准</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">服务说明</div>
+        <div>
+          <h2>参考包含项目与报名备注</h2>
+          <p class="lead">参照轻奢研学小册子的呈现方式，正式报价建议在日期、人数、酒店等级、房型、航班路线和供应商可用性确认后出具。</p>
+        </div>
+      </div>
+
+      <div class="service-list">
+        <article class="card tint">
+          <h3>通常包含</h3>
+          <ul>
+            <li>浙江、上海高端酒店或精品疗愈型住宿，或同等级住宿</li>
+            <li>行程内早餐及指定午餐、晚餐</li>
+            <li>列明的文化工作坊、基础材料与预约协调</li>
+            <li>确认活动期间的当地专车或地面交通安排</li>
+            <li>双语协调、当地接待支持与抵达前客户沟通</li>
+            <li>最终行程中明确列出的门票或体验费用</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>通常不含</h3>
+          <ul>
+            <li>国际或境内航班、机场税、行李费</li>
+            <li>护照、签证、中国入境材料与旅行保险，除非报价中特别说明</li>
+            <li>单房差或超出确认报价的房型升级</li>
+            <li>个人消费、购物、洗衣、迷你吧和可选水疗项目</li>
+            <li>安排品鉴之外的酒水，以及未以书面列明的服务</li>
+            <li>因航班变动、天气、个人行程调整或不可抗力产生的额外费用</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="quote">建议报价格式：每人项目费用、单房差、付款节点、取消政策、房型标准、餐食标准、交通标准，以及已包含体验费用清单。</div>
+
+      <div class="footer-note">
+        <span>价格：确认后报价</span>
+        <span>xletravels@gmail.com</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">费用与报名</div>
+        <div>
+          <h2>报名咨询前需要确认</h2>
+          <p class="lead">为了让报价和服务更准确，建议在正式报名之前完成以下信息收集。</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <h3>客人需提供</h3>
+          <ul class="plain-list">
+            <li>旅行者年龄段与人数</li>
+            <li>期望出行日期与停留天数</li>
+            <li>出发城市、抵达城市、是否需要接送机</li>
+            <li>房型偏好、预算范围、同行关系</li>
+            <li>饮食限制、过敏、行动能力、健康注意事项</li>
+            <li>中国入境或签证状态、保险需求</li>
+          </ul>
+        </article>
+        <article class="card tint">
+          <h3>团队需确认</h3>
+          <ul class="plain-list">
+            <li>最终日期、名额、价格与供应商报价</li>
+            <li>住宿等级、房型与是否可满足特殊需求</li>
+            <li>活动供应商、季节可行性与天气备选方案</li>
+            <li>交通、步行强度、行李动线和休整时间</li>
+            <li>付款节点、取消政策、发票、保险建议</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="cta">
+        <h3>转人工咨询</h3>
+        <p>请发送邮件至 xletravels@gmail.com，并附上：人数、年龄段、期望日期、出发城市、房型偏好、饮食或行动需求，以及想了解的问题。</p>
+      </div>
+
+      <div class="footer-note">
+        <span>本项目为身心疗愈取向的文化旅行，不属于医疗或临床服务。</span>
+        <span>xletravels@gmail.com</span>
+      </div>
+    </section>
+  </body>
+</html>

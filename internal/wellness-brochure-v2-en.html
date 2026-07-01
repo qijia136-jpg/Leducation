@@ -220,6 +220,45 @@
         color: var(--leaf);
       }
 
+      .daily-card {
+        display: grid;
+        grid-template-columns: 24mm 1fr;
+        gap: 5mm;
+        margin-bottom: 4mm;
+        padding: 5mm;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .daily-card .day-tag {
+        color: var(--leaf);
+        font-weight: 900;
+      }
+
+      .daily-card h3 {
+        margin: 0 0 2mm;
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      .daily-card p {
+        margin: 0 0 2mm;
+        color: var(--muted);
+      }
+
+      .daily-card .meta {
+        color: #7a6040;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .service-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5mm;
+      }
+
       .activity-cloud {
         display: flex;
         flex-wrap: wrap;
@@ -301,6 +340,44 @@
 
     <section class="page">
       <div class="chapter">
+        <div class="chapter-label">Journey Snapshot</div>
+        <div>
+          <h2>11 Days / 9 Nights Suggested Travel Pattern</h2>
+          <p class="lead">The retreat itself is designed as a 10-day in-China experience, with international flight timing typically creating an 11-day / 9-night guest journey. The final routing should be confirmed after origin city, dates, and airfare are reviewed.</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <article class="card tint">
+          <h3>Recommended Flight Gateway</h3>
+          <ul>
+            <li>Preferred arrival: Shanghai Pudong International Airport (PVG)</li>
+            <li>Alternative arrival: Hangzhou Xiaoshan International Airport (HGH)</li>
+            <li>Recommended departure: Shanghai Pudong (PVG) or Hangzhou (HGH), depending on the confirmed route</li>
+            <li>Guests should arrive by afternoon where possible to allow smooth transfer, check-in, and rest</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Arrival and Logistics</h3>
+          <ul>
+            <li>Airport greeting and private transfer can be arranged after flight confirmation</li>
+            <li>One checked luggage and one carry-on per guest is recommended for easier transfers</li>
+            <li>Dietary, mobility, allergy, and wellness notes should be collected before final booking</li>
+            <li>Visa or China entry requirements must be checked according to each guest passport</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="quote">Suggested booking flow: confirm group size, preferred dates, arrival city, room preference, passport nationality, mobility notes, dietary restrictions, and interest level in alcohol-free alternatives.</div>
+
+      <div class="footer-note">
+        <span>Flight recommendations are for planning only</span>
+        <span>Final flights are subject to airline schedule and fare availability</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
         <div class="chapter-label">Why This Journey</div>
         <div>
           <h2>China, Experienced Slowly</h2>
@@ -368,23 +445,23 @@
       <div class="itinerary">
         <div class="day-row">
           <strong>Day 1</strong>
-          <div><b>Arrival and Private Check-In</b><br>Shanghai or Zhejiang arrival support, welcome tea, retreat orientation, preference review, and quiet evening recovery.</div>
+          <div><b>Arrival and Private Check-In</b><br>Arrive in Shanghai or Zhejiang. Airport greeting and private transfer can be arranged. Check in, enjoy welcome tea, review personal preferences, and recover quietly from international travel.</div>
         </div>
         <div class="day-row">
           <strong>Day 2</strong>
-          <div><b>Meditation and Calligraphy</b><br>Morning breathwork and seated meditation, followed by calligraphy practice, tea, journaling, and a relaxed welcome dinner.</div>
+          <div><b>Meditation and Calligraphy</b><br>Begin with breathwork and seated meditation. A calligraphy mentor introduces brush, ink, posture, and rhythm, turning Chinese characters into a meditative practice. Afternoon tea and journaling help guests settle into the retreat pace.</div>
         </div>
         <div class="day-row">
           <strong>Day 3</strong>
-          <div><b>West Lake Ambience and Ink Painting</b><br>A slow scenic walk, Chinese ink painting, garden lunch, optional rest or massage block, and evening reflection.</div>
+          <div><b>West Lake Ambience and Ink Painting</b><br>Enjoy a slow scenic walk inspired by West Lake aesthetics. In the studio session, guests learn how ink, water, empty space, and brush pressure create classical Chinese landscape mood.</div>
         </div>
         <div class="day-row">
           <strong>Days 4-5</strong>
-          <div><b>Porcelain Making and Painting</b><br>Hands-on porcelain craft, painting on porcelain, tea, quiet focus practice, and a small group art-sharing session.</div>
+          <div><b>Porcelain Making and Painting</b><br>Work with clay and porcelain forms, then paint porcelain surfaces with guided motifs. This is designed as a tactile cultural experience rather than a technical class, suitable for first-time guests.</div>
         </div>
         <div class="day-row">
           <strong>Days 6-7</strong>
-          <div><b>Water Town and Craft Brewery</b><br>A gentle walk through a China water town, local dining, a boutique brewery visit, relaxed craft beer tasting, and non-alcoholic alternatives on request.</div>
+          <div><b>Water Town and Craft Brewery</b><br>Walk through canal lanes, stone bridges, courtyards, and old-town textures. Later, visit a boutique brewery to understand contemporary craft culture in China, with relaxed tasting and non-alcoholic alternatives on request.</div>
         </div>
         <div class="day-row">
           <strong>Days 8-9</strong>
@@ -399,6 +476,160 @@
       <div class="footer-note">
         <span>Framework itinerary · Subject to confirmation</span>
         <span>Zhejiang and Shanghai</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">Daily Detail</div>
+        <div>
+          <h2>Visits and Experiences</h2>
+          <p class="lead">The descriptions below are written for client-facing use. They explain why each visit matters, what guests do on site, and how the day feels.</p>
+        </div>
+      </div>
+
+      <div class="daily-card">
+        <div class="day-tag">Day 1</div>
+        <div>
+          <h3>Arrival, Welcome Tea, and Retreat Orientation</h3>
+          <p>Guests are met at the airport or rail station after flight confirmation. The first evening is intentionally soft: check-in, welcome tea, a short orientation, and time to unpack. The team reconfirms dietary needs, walking comfort, and next-day timing.</p>
+          <div class="meta">Meals: welcome tea / light dinner subject to arrival time. Stay: premium hotel or boutique retreat stay.</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">Day 2</div>
+        <div>
+          <h3>Seated Meditation and Calligraphy</h3>
+          <p>The morning introduces breath, posture, and quiet attention. In the calligraphy session, guests learn the relationship between brush pressure, ink flow, body alignment, and rhythm. The focus is not perfect handwriting; it is entering Chinese culture through movement and presence.</p>
+          <div class="meta">Meals: breakfast, lunch, dinner. Stay: premium hotel or boutique retreat stay.</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">Day 3</div>
+        <div>
+          <h3>West Lake Ambience and Chinese Ink Painting</h3>
+          <p>A slow scenic excursion introduces the classical mood of water, bridges, gardens, and layered views. The afternoon ink painting workshop translates that atmosphere into brushwork, empty space, tonal gradation, and mountain-water composition.</p>
+          <div class="meta">Meals: breakfast, lunch, dinner. Stay: premium hotel or boutique retreat stay.</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">Day 4</div>
+        <div>
+          <h3>Porcelain Forms and Clay Practice</h3>
+          <p>Guests visit a porcelain studio or craft space and learn how clay becomes vessel, surface, and memory. The session is designed for first-time makers, with guided forming, object observation, and cultural context around Chinese ceramics.</p>
+          <div class="meta">Meals: breakfast, lunch, dinner. Stay: premium hotel or boutique retreat stay.</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">Day 5</div>
+        <div>
+          <h3>Porcelain Painting, Tea, and Reflection</h3>
+          <p>Guests paint porcelain using accessible motifs inspired by landscape, floral forms, or personal symbols. The day slows down with tea and journaling, giving everyone time to connect the handmade object with the broader retreat theme.</p>
+          <div class="meta">Meals: breakfast, lunch, dinner. Stay: premium hotel or boutique retreat stay.</div>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        <span>Daily detail 1 of 2</span>
+        <span>Mind-body wellness and cultural immersion</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">Daily Detail</div>
+        <div>
+          <h2>Scenery, Craft, and Contemporary Taste</h2>
+          <p class="lead">The second half of the program adds contrast: water-town atmosphere, modern craft culture, spacious rest, and a thoughtful close.</p>
+        </div>
+      </div>
+
+      <div class="daily-card">
+        <div class="day-tag">Day 6</div>
+        <div>
+          <h3>Water Town Ancient Lanes and Canal Walk</h3>
+          <p>Guests explore a Chinese water-town setting with canals, stone bridges, courtyards, local textures, and small shops. The visit is paced for observation and photography rather than rushed sightseeing.</p>
+          <div class="meta">Meals: breakfast, lunch, dinner. Stay: premium hotel or boutique retreat stay.</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">Day 7</div>
+        <div>
+          <h3>Boutique Brewery Visit and Craft Beer Tasting</h3>
+          <p>A guided brewery visit introduces contemporary Chinese craft culture: ingredients, fermentation, production flow, and tasting language. Non-alcoholic alternatives can be arranged so the activity remains inclusive and relaxed.</p>
+          <div class="meta">Meals: breakfast, lunch, tasting/light dinner. Stay: premium hotel or boutique retreat stay.</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">Day 8</div>
+        <div>
+          <h3>Gentle Movement and Cultural Deepening</h3>
+          <p>Morning meditation and light movement help the group integrate the travel rhythm. The afternoon can be used for a deeper art session, tea, spa-style rest, or a light local visit depending on guest energy.</p>
+          <div class="meta">Meals: breakfast, lunch, dinner. Stay: premium hotel or boutique retreat stay.</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">Day 9</div>
+        <div>
+          <h3>Integration, Closing Circle, and Farewell Dinner</h3>
+          <p>The final full day is calm and ceremonial. Guests review handmade works, share reflections, enjoy personal time, and gather for a farewell dinner that closes the retreat without rushing the emotional transition.</p>
+          <div class="meta">Meals: breakfast, lunch, farewell dinner. Stay: premium hotel or boutique retreat stay.</div>
+        </div>
+      </div>
+      <div class="daily-card">
+        <div class="day-tag">Day 10-11</div>
+        <div>
+          <h3>Departure Transfer and International Return</h3>
+          <p>The team assists with check-out, transfer, rail or airport timing, luggage movement, and onward travel questions. For long-haul flights, arrival home may be the following calendar day.</p>
+          <div class="meta">Meals: breakfast on Day 10 where hotel timing allows. Day 11 is an international flight buffer.</div>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        <span>Daily detail 2 of 2</span>
+        <span>Final routing depends on confirmed dates and suppliers</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter">
+        <div class="chapter-label">Services</div>
+        <div>
+          <h2>Reference Inclusions and Booking Notes</h2>
+          <p class="lead">Like the reference study-tour brochure, final pricing should be issued after dates, group size, hotel level, rooming, flight routes, and supplier availability are confirmed.</p>
+        </div>
+      </div>
+
+      <div class="service-list">
+        <article class="card tint">
+          <h3>Usually Included</h3>
+          <ul>
+            <li>Premium hotel or boutique retreat stay in Zhejiang and Shanghai, or same class</li>
+            <li>Breakfast and specified lunches/dinners during the program</li>
+            <li>Listed cultural workshops, basic materials, and reservation coordination</li>
+            <li>Local private transfer or arranged ground transportation during confirmed activities</li>
+            <li>Bilingual coordination, local host support, and guest communication before arrival</li>
+            <li>Entry or activity fees specifically listed in the final itinerary</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Usually Not Included</h3>
+          <ul>
+            <li>International or domestic flights, airport taxes, and baggage fees</li>
+            <li>Passport, visa, China entry documentation, and travel insurance unless stated</li>
+            <li>Single-room supplement or room upgrades beyond the confirmed quote</li>
+            <li>Personal expenses, shopping, laundry, minibar, and optional spa services</li>
+            <li>Alcohol beyond the arranged tasting and any services not listed in writing</li>
+            <li>Costs caused by airline changes, weather, personal itinerary changes, or force majeure</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="quote">Quotation format recommended: program price per person, single supplement, payment schedule, cancellation terms, room category, meal plan, transport standard, and a clear list of included activity fees.</div>
+
+      <div class="footer-note">
+        <span>Price: to be quoted after confirmation</span>
+        <span>Contact: xletravels@gmail.com</span>
       </div>
     </section>
 
