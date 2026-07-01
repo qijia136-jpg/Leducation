@@ -1,124 +1,398 @@
+const supportEmail = "xletravels@gmail.com";
+
 const retreatAnswers = [
   {
-    title: "Suitability",
-    keywords: ["suitable", "fit", "who", "parent", "traveler", "senior", "slow", "pace", "luxury"],
+    title: "What this journey is",
+    keywords: ["program", "trip", "journey", "tour", "overview", "what", "about"],
     html: `
-      <p>This retreat is best for travelers who want a guided China experience with culture, wellness-oriented pacing, local learning, and calmer daily rhythm than a standard tour.</p>
+      <p>This is a 10-day China cultural immersion and high-end customized wellness journey, not a standard sightseeing tour.</p>
+      <p>The route combines Shanghai, China Jingdezhen the Porcelain Capital, Zhejiang wellness practice, Taoist cultural context, calligraphy, ink painting, Jiangnan water towns, West Lake, a brewery experience, luxury-standard stays, refined dining, and take-home works.</p>
+    `
+  },
+  {
+    title: "Who it suits",
+    keywords: ["suitable", "fit", "who", "family", "couple", "friend", "senior", "luxury", "culture", "wellness"],
+    html: `
+      <p>This journey suits international guests who want a slower, deeper, more comfortable way to experience China.</p>
       <ul>
-        <li>Good fit: couples, friends, small groups, families, and wellness-minded travelers.</li>
-        <li>Confirm first: mobility needs, dietary restrictions, hotel expectations, medical conditions, and preferred dates.</li>
-        <li>Not ideal without manual review: travelers needing intensive medical care or fully private support.</li>
+        <li>Good fit: couples, friends, small families, private small groups, culture lovers, and light-luxury travelers.</li>
+        <li>Especially relevant for guests interested in meditation, calligraphy, ink painting, porcelain, Taoist culture, and refined Chinese dining.</li>
       </ul>
     `
   },
   {
-    title: "Inclusions to Confirm",
-    keywords: ["include", "included", "price", "fee", "cost", "hotel", "meal", "transport"],
+    title: "Who should confirm suitability first",
+    keywords: ["not suitable", "medical", "nursing", "wheelchair", "accessibility", "condition", "health", "zero tolerance"],
     html: `
-      <p>Inclusions must be confirmed against the current quotation. Typical items to verify are accommodation, meals, scheduled local transport, guided activities, entrance tickets, airport transfer, insurance, and bilingual support.</p>
-      <p>For an accurate quote, email the preferred dates, number of travelers, room preference, and departure city.</p>
+      <p>Please contact human support before booking if a guest requires medical care, clinical treatment, nursing care, full wheelchair accessibility, or cannot accept any weather or supplier adjustment.</p>
+      <p>This is a cultural and wellness-oriented travel program. It does not provide diagnosis, clinical treatment, nursing, or promised health outcomes.</p>
     `
   },
   {
-    title: "Retreat Activities",
-    keywords: ["activity", "activities", "meditation", "calligraphy", "ink", "painting", "porcelain", "ceramic", "water", "town", "west", "lake", "brewery", "beer"],
+    title: "Children and younger travelers",
+    keywords: ["child", "children", "kid", "teen", "teenager", "family", "age", "12"],
     html: `
-      <p>The experience can include seated meditation, breathwork, calligraphy, Chinese ink painting, porcelain making, porcelain painting, a China water-town walk, West Lake-inspired scenery, a boutique brewery visit, and relaxed craft beer tasting.</p>
-      <p>The final activity mix should be adjusted by season, supplier availability, guest mobility, and group preference.</p>
+      <p>The journey is designed mainly for guests who are comfortable with slower cultural workshops, quiet practice, and premium travel pacing.</p>
+      <p>Families with children age 12+ may be considered case by case. Please email the child's age, travel experience, and family expectations for confirmation.</p>
     `
   },
   {
-    title: "Zhejiang and Shanghai Locations",
-    keywords: ["zhejiang", "shanghai", "location", "place", "route", "culture", "city", "mountain", "west", "lake", "water", "town"],
+    title: "Tour language",
+    keywords: ["language", "english", "chinese", "guide", "translator", "french", "spanish", "japanese"],
     html: `
-      <p>The retreat can be framed around Zhejiang and Shanghai. Zhejiang supports the slower wellness rhythm through West Lake ambience, water-town scenery, tea, porcelain craft, local food, and quiet stays. Shanghai can support arrival, departure, and a light city transition.</p>
+      <p>The journey is conducted in English by default, with Chinese-speaking guides or staff also present.</p>
+      <p>If another language is needed, such as French, Japanese, or Spanish, please inquire in advance. Availability and possible surcharges depend on dates and locations.</p>
+    `
+  },
+  {
+    title: "Private group, not joined with strangers",
+    keywords: ["group", "private", "strangers", "join", "shared", "custom", "exclusive"],
+    html: `
+      <p>This product is positioned as high-end private customization. It usually operates as a private group for a family, couple, friends, or an invited party.</p>
+      <p>If a guest is open to a specific small-group date, the team will separately confirm group size, configuration, price, and service standard before anything is committed.</p>
+    `
+  },
+  {
+    title: "Price and flight boundary",
+    keywords: ["price", "cost", "fee", "5999", "5999.99", "flight", "china-us", "airfare", "included"],
+    html: `
+      <p>The reference starting price is <strong>from USD 5,999.99 per person</strong>, excluding China-US round-trip international flights.</p>
       <ul>
-        <li>Locations should be introduced as cultural and lifestyle experiences, not medical or religious promises.</li>
-        <li>Route, transportation, walking intensity, and timing must be confirmed before booking.</li>
-        <li>Pair cultural visits with tea, gentle walking, food culture, and reflective discussion for a calmer experience.</li>
+        <li>Default pricing assumes standard twin-share occupancy.</li>
+        <li>Single occupancy, room upgrades, suites, connecting rooms, and special-view rooms require a supplement.</li>
+        <li>Final pricing depends on travel dates, group size, hotel tier, room type, dining standard, ground transport, activity vendors, and custom requests.</li>
       </ul>
     `
   },
   {
-    title: "Candidate Stay Styles",
-    keywords: ["stay", "hotel", "homestay", "garden", "nature", "boutique", "accommodation", "room", "where"],
+    title: "What the price usually includes",
+    keywords: ["include", "included", "inclusions", "cover", "hotel", "car", "rail", "dining", "workshop", "guide"],
     html: `
-      <p>The retreat can be framed around garden-style, quiet nature, or culture-forward boutique stays in Zhejiang and Shanghai.</p>
-      <p>These should not be promised until operations confirms availability, room standards, access, meals, group capacity, and payment or cancellation terms.</p>
+      <p>The reference package usually includes the 10-day core itinerary within China, five-star or near-five-star accommodation, private car service, business-class high-speed rail seats where applicable, refined dining, listed cultural workshops, and English-speaking guide service.</p>
+      <p>Final inclusions must be confirmed in the formal quotation.</p>
     `
   },
   {
-    title: "Medical Boundary",
-    keywords: ["medical", "therapy", "treatment", "doctor", "healing", "health", "condition", "medicine"],
+    title: "What is not included",
+    keywords: ["not included", "excluded", "exclude", "airfare", "visa", "insurance", "tips", "shopping", "optional"],
     html: `
-      <p>This should be presented as a wellness and cultural immersion retreat, not a medical treatment, therapy program, or clinical service.</p>
-      <ul>
-        <li>Do not promise health outcomes, diagnosis, treatment, or recovery.</li>
-        <li>Travelers with medical conditions should consult their doctor before travel.</li>
-        <li>Any health, medication, mobility, allergy, or accessibility concern should be escalated to human support.</li>
-      </ul>
+      <p>Common exclusions: China-US round-trip airfare, visa fees, travel insurance, single-room supplement, personal shopping, incidental expenses, tips or gratuities, meals not listed in the final itinerary, and optional activities or upgrades.</p>
     `
   },
   {
-    title: "Documents and Travel Preparation",
-    keywords: ["passport", "visa", "document", "entry", "insurance", "prepare"],
+    title: "Travel insurance",
+    keywords: ["insurance", "travel insurance", "medical emergency", "baggage", "delay", "required"],
     html: `
-      <p>Common preparation items include a valid passport, China entry or visa documents where required, emergency contact, insurance, health notes, allergy information, and payment confirmation.</p>
-      <p>Entry requirements can change, so the team should confirm the latest checklist before booking.</p>
+      <p>Travel insurance is not included but is strongly recommended. Guests should purchase comprehensive coverage for trip cancellation, medical emergencies, baggage loss, and travel delays before departure.</p>
+      <p>The team may suggest common options but does not sell or endorse a specific policy.</p>
     `
   },
   {
-    title: "Mobility and Pace",
-    keywords: ["walk", "walking", "mobility", "wheelchair", "pace", "tired", "age"],
+    title: "Payment schedule",
+    keywords: ["payment", "deposit", "balance", "pay", "invoice", "contract"],
     html: `
-      <p>The retreat is intended to be gentler than a high-intensity sightseeing trip, but travelers may still need to walk, use stairs, board vehicles, and join scheduled activities.</p>
-      <p>Share any mobility limits before booking so the team can confirm whether the itinerary, hotel, and transport are suitable.</p>
+      <p>The payment schedule is specified in the formal quotation and contract. A deposit is typically required to secure dates and begin coordination, with the balance due according to contract terms.</p>
+      <p>Specific percentages and deadlines depend on season, hotel policies, and vendor requirements.</p>
     `
   },
   {
-    title: "Food and Dietary Needs",
-    keywords: ["food", "meal", "diet", "vegetarian", "allergy", "halal", "kosher", "beer", "brewery"],
+    title: "Refund, cancellation, and date changes",
+    keywords: ["refund", "cancel", "cancellation", "date change", "change date", "policy"],
     html: `
-      <p>Dietary needs should be collected early and confirmed with local suppliers. The team should know allergies, vegetarian preference, religious dietary restrictions, food intolerances, and any medical diet requirements.</p>
-      <p>If a craft beer tasting is included, non-alcoholic alternatives should be available on request.</p>
+      <p>Refund, cancellation, and date-change policies must be confirmed through the formal quotation or contract.</p>
+      <p>Rules vary by hotel, restaurant, transport provider, workshop vendor, and holiday period. The website should not be treated as a booking contract.</p>
     `
   },
   {
-    title: "Human Support",
-    keywords: ["human", "person", "contact", "email", "agent", "manual", "book", "booking"],
+    title: "Institutional invoices",
+    keywords: ["school", "institution", "invoice", "purchase order", "po", "company", "billing"],
     html: `
-      <p>Email xletravels@gmail.com for booking-specific help. Include traveler age range, preferred travel dates, number of travelers, departure city, room preference, mobility or dietary needs, and the question.</p>
+      <p>Institutional invoicing may be possible depending on the arrangement. Please email the institution's purchase-order process, billing requirements, traveler details, and requested travel dates.</p>
+    `
+  },
+  {
+    title: "Hotels and room type",
+    keywords: ["hotel", "stay", "accommodation", "room", "single", "suite", "connecting", "view", "five-star"],
+    html: `
+      <p>Accommodation is planned around five-star luxury hotels or near-five-star standard properties.</p>
+      <p>The default room standard is twin-share. Single occupancy, suite upgrades, connecting rooms, and special-view rooms require a supplement and are subject to hotel confirmation.</p>
+    `
+  },
+  {
+    title: "Choosing a hotel",
+    keywords: ["choose hotel", "own hotel", "preferred hotel", "hotel preference", "brand"],
+    html: `
+      <p>Guests may express hotel preferences. The team will check availability and incorporate the preferred hotel into the quotation if feasible.</p>
+      <p>Hotel changes may affect route logistics and pricing.</p>
+    `
+  },
+  {
+    title: "Dining standard and Black Pearl restaurants",
+    keywords: ["restaurant", "dining", "meal", "black pearl", "michelin", "luxury", "food", "cuisine"],
+    html: `
+      <p>Meals focus on light-luxury restaurants, with selected high-end Black Pearl guide-style dining where the route permits.</p>
+      <p>Black Pearl is a respected Chinese restaurant guide, often compared with Michelin in the local dining context.</p>
+    `
+  },
+  {
+    title: "Dietary restrictions and allergies",
+    keywords: ["diet", "dietary", "allergy", "allergies", "vegetarian", "vegan", "halal", "seafood", "nut", "dairy", "alcohol"],
+    html: `
+      <p>Dietary restrictions must be declared at booking. Vegetarian, seafood, nut, dairy, alcohol-free, halal, religious, and allergy-related needs require advance vendor confirmation.</p>
+    `
+  },
+  {
+    title: "Restaurant and cuisine requests",
+    keywords: ["specific restaurant", "cuisine", "huaiyang", "cantonese", "zhejiang", "request restaurant"],
+    html: `
+      <p>Guests may request specific restaurants or cuisine types. The team will check availability, location feasibility within the route, and pricing impact before confirming.</p>
+    `
+  },
+  {
+    title: "10-day route",
+    keywords: ["itinerary", "route", "10 day", "11 day", "9 night", "snapshot", "schedule"],
+    html: `
+      <p>Core route: Shanghai arrival, China Jingdezhen porcelain experience, Zhejiang wellness retreat, Jiangnan water towns, West Lake, and return logistics.</p>
+      <p>The in-China program is designed as 10 days. With international flight timing and time zones, the guest journey is commonly communicated as 11 days / 9 nights.</p>
+    `
+  },
+  {
+    title: "Why Jingdezhen is early",
+    keywords: ["jingdezhen", "porcelain", "ceramic", "early", "kiln", "firing", "packing"],
+    html: `
+      <p>Porcelain-making requires finishing, kiln firing, and protective packing. Placing Jingdezhen early maximizes the chance for guests to take home completed porcelain pieces by the end of the journey.</p>
+    `
+  },
+  {
+    title: "Take-home works",
+    keywords: ["take home", "bring home", "porcelain", "calligraphy", "ink painting", "artwork", "works"],
+    html: `
+      <p>Depending on workshop schedules and completion timelines, guests can take home porcelain pieces, calligraphy, and ink painting works.</p>
+      <p>Porcelain involves firing and packing, so the final take-home format depends on the studio's actual completion status.</p>
+    `
+  },
+  {
+    title: "Day-by-day itinerary",
+    keywords: ["day by day", "daily", "detail", "schedule", "sample itinerary", "confirmed itinerary"],
+    html: `
+      <p>The brochure includes a 10-day snapshot. A confirmed day-by-day itinerary is provided after booking once dates, hotels, restaurant availability, transport, and workshop schedules are locked in.</p>
+    `
+  },
+  {
+    title: "Transportation and airport transfers",
+    keywords: ["transport", "car", "chauffeur", "private car", "airport", "pickup", "drop-off", "rail", "train", "business class"],
+    html: `
+      <p>Private car service and chauffeur-driven ground transport are arranged for confirmed city and intercity travel. If high-speed rail is required, business-class seats are arranged where available.</p>
+      <p>Private pickup at Shanghai Pudong International Airport (PVG) and departure drop-off are included for confirmed arrangements. Other airports should be specified before booking.</p>
+    `
+  },
+  {
+    title: "Typical daily pace",
+    keywords: ["pace", "daily pace", "walk", "walking", "rest", "slow", "busy", "tired"],
+    html: `
+      <p>The pace is slower than standard group tours, with built-in rest and flexibility. A typical day may include morning wellness or cultural practice, lunch, afternoon exploration or workshop time, and refined dinner.</p>
+      <p>Guests should still expect walking, getting in and out of vehicles, workshops, site visits, and city-to-city movement.</p>
+    `
+  },
+  {
+    title: "Wellness practice",
+    keywords: ["wellness", "meditation", "breathwork", "breathing", "tea", "calligraphy", "ink", "taoist", "tongbai", "tiantai"],
+    html: `
+      <p>The wellness section can include seated meditation, breathwork, gentle body practice, tea, writing, calligraphy, ink painting, and cultural context connected to Tiantai Mountain and Tongbai Palace Taoist heritage.</p>
+      <p>Use wording such as cultural understanding and body-mind relaxation. Avoid promising therapeutic or clinical outcomes.</p>
+    `
+  },
+  {
+    title: "No prior experience required",
+    keywords: ["beginner", "experience", "skill", "meditation experience", "art experience", "first time"],
+    html: `
+      <p>No prior meditation or art experience is required. Workshops are designed for beginners and led by instructors in a gentle, exploratory, culturally immersive way.</p>
+    `
+  },
+  {
+    title: "Taoist cultural context",
+    keywords: ["taoist", "daoist", "religion", "religious", "tongbai", "tiantai", "palace"],
+    html: `
+      <p>The Zhejiang wellness segment draws on the cultural context of Tiantai Mountain and Tongbai Palace, an important Taoist heritage site.</p>
+      <p>The experience is presented as cultural and wellness heritage, not religious instruction. Participation is cultural and voluntary.</p>
+    `
+  },
+  {
+    title: "Brewery experience and alcohol-free option",
+    keywords: ["beer", "brewery", "alcohol", "non-alcoholic", "tea ceremony", "tasting", "drink"],
+    html: `
+      <p>The brewery visit and tasting is a relaxed social and contemporary-China lifestyle component.</p>
+      <p>Guests who do not drink alcohol may opt out or request non-alcoholic alternatives. The brewery segment can also be replaced with an extended tea experience if requested during customization.</p>
+    `
+  },
+  {
+    title: "Jiangnan water towns and West Lake",
+    keywords: ["jiangnan", "water town", "west lake", "hangzhou", "canal", "bridge", "garden", "lake"],
+    html: `
+      <p>Jiangnan water towns emphasize canals, stone bridges, alleyways, courtyards, and waterside daily life.</p>
+      <p>West Lake emphasizes lake views, bridges, classical gardens, mountain silhouettes, and Chinese landscape aesthetics. Together they offer a fuller view of Jiangnan culture.</p>
+    `
+  },
+  {
+    title: "Accessibility and mobility",
+    keywords: ["accessibility", "wheelchair", "mobility", "stairs", "uneven", "knee", "back", "senior"],
+    html: `
+      <p>This journey is not designed for full wheelchair accessibility. Some heritage sites, water-town lanes, and temple areas may have steps, uneven surfaces, and narrow passages.</p>
+      <p>Guests with mobility aids, knee or back concerns, chronic conditions, or accessibility needs should contact human support for a case-by-case assessment before booking.</p>
+    `
+  },
+  {
+    title: "Medical emergency during the trip",
+    keywords: ["emergency", "hospital", "doctor", "ill", "sick", "medical emergency", "medicine"],
+    html: `
+      <p>If a medical emergency occurs, the guide and team will assist in arranging transport to the nearest appropriate medical facility.</p>
+      <p>Guests should carry travel insurance with medical coverage and bring any necessary personal medication. The program does not provide on-site medical personnel.</p>
+    `
+  },
+  {
+    title: "Altitude and air quality",
+    keywords: ["altitude", "air quality", "pollution", "respiratory", "asthma", "season"],
+    html: `
+      <p>The route destinations are low altitude, so altitude sickness is not expected. Air quality varies by season.</p>
+      <p>Guests with respiratory conditions should consult their doctor before travel and bring any necessary medication.</p>
+    `
+  },
+  {
+    title: "Flights and arrival airport",
+    keywords: ["airport", "pvg", "sha", "arrival", "departure", "flight", "fly", "shanghai pudong"],
+    html: `
+      <p>The recommended arrival airport is Shanghai Pudong International Airport (PVG). The exact arrival and departure city should be confirmed based on origin city, flight pricing, travel dates, route, and final hotel arrangements.</p>
+      <p>China-US round-trip flights are not included. After the itinerary is confirmed, guests should book China round-trip flights as soon as possible to reduce the risk of limited seat availability, sharply rising fares, or related losses.</p>
+    `
+  },
+  {
+    title: "Visa and entry documents",
+    keywords: ["visa", "passport", "entry", "document", "l visa", "invitation", "embassy", "consulate"],
+    html: `
+      <p>Guests are responsible for confirming China entry requirements based on passport nationality and departure country.</p>
+      <p>Many international travelers may need a Chinese tourist visa. The team only assists by providing the itinerary schedule and invitation letter when appropriate. If confirmed booking information is needed for visa materials, guests should understand that visa refusal may still create non-refundable costs or other losses that must be borne by the guest according to the booking terms.</p>
+      <p>The team cannot guarantee visa outcomes. Always verify requirements with official sources before making commitments.</p>
+    `
+  },
+  {
+    title: "Packing list",
+    keywords: ["pack", "packing", "luggage", "clothes", "shoes", "rain", "temple", "medicine"],
+    html: `
+      <p>Recommended items include comfortable walking shoes, lightweight layers, seasonal outerwear, rain protection, sun protection, personal toiletries and medication, modest clothing for temple or meditation settings, and a small daypack.</p>
+      <p>A detailed seasonal packing note is provided in the pre-trip briefing.</p>
+    `
+  },
+  {
+    title: "Internet and apps in China",
+    keywords: ["wifi", "internet", "vpn", "google", "instagram", "whatsapp", "gmail", "wechat"],
+    html: `
+      <p>Hotels provide WiFi, and private vehicles may have mobile WiFi. Some international apps and services may be restricted in China without a VPN.</p>
+      <p>Guests should install and test any needed VPN or communication tools before departure. The team may suggest common options but does not endorse a specific provider.</p>
+    `
+  },
+  {
+    title: "Payments in China",
+    keywords: ["credit card", "visa card", "mastercard", "alipay", "wechat pay", "cash", "money", "cny"],
+    html: `
+      <p>International credit cards are accepted at major hotels and some upscale restaurants, but not everywhere. WeChat Pay and Alipay are widely used for daily transactions.</p>
+      <p>Guests are advised to set up Alipay or WeChat Pay with an international card before travel and carry some Chinese Yuan cash for small vendors.</p>
+    `
+  },
+  {
+    title: "Customization and extensions",
+    keywords: ["custom", "customize", "change", "extra day", "extension", "beijing", "xian", "guilin", "chengdu", "suzhou"],
+    html: `
+      <p>The journey is private and customizable within the limits of supplier availability and route logic. Guests may request changes to pace, dining, room type, cultural experiences, shopping, rest time, or activities.</p>
+      <p>Pre-tour and post-tour extensions can be quoted separately. Possible additions include extra Shanghai days, Suzhou, Nanjing, Huangshan, Beijing, Xi'an, Guilin/Yangshuo, or Chengdu.</p>
+    `
+  },
+  {
+    title: "Weather and route changes",
+    keywords: ["weather", "rain", "change", "route", "season", "best time", "spring", "autumn", "fall", "winter", "summer"],
+    html: `
+      <p>Spring and autumn are often comfortable seasons for Jiangnan travel. Summer can be hot and rainy; winter is colder but may have fewer crowds.</p>
+      <p>Images and routes are for reference only. Weather, traffic, supplier availability, and local conditions may require adjustments. Actual arrangements take priority.</p>
+    `
+  },
+  {
+    title: "When to book",
+    keywords: ["book", "advance", "when", "lead time", "last minute", "peak season", "national day", "new year"],
+    html: `
+      <p>Recommended booking lead time is at least 6-8 weeks for standard dates and 10-12 weeks for peak seasons such as April-May, September-October, Chinese National Day week, or Chinese New Year period.</p>
+      <p>Last-minute bookings may be possible but depend on hotel and vendor availability and may incur surcharges.</p>
+    `
+  },
+  {
+    title: "What happens after inquiry",
+    keywords: ["after inquiry", "submit", "next step", "quote", "quotation", "booking process", "timeline"],
+    html: `
+      <p>After an inquiry, human support typically acknowledges the request within 24-48 hours, reviews dates and requirements, then prepares a preliminary quotation.</p>
+      <p>After deposit and formal confirmation, the team develops a confirmed itinerary with specific hotels, restaurants, workshops, and pre-trip briefing documents.</p>
+    `
+  },
+  {
+    title: "When human support is required",
+    keywords: ["human", "person", "agent", "support", "manual", "final", "commitment", "contract", "complex"],
+    html: `
+      <p>Please email human support for final pricing, specific dates, flights, visas, insurance, single occupancy, health conditions, mobility concerns, dietary allergies, refund requests, invoicing, payment, special celebrations, private groups, and complex customization.</p>
+    `
+  },
+  {
+    title: "Human support contact",
+    keywords: ["contact", "email", "wechat", "phone", "call", "book", "booking", "question"],
+    html: `
+      <p>Email <strong>xletravels@gmail.com</strong> for booking-specific help.</p>
+      <p>Please include traveler count, preferred dates, departure city, room preference, single-occupancy needs, dietary and mobility notes, and the questions you want answered. Phone or WeChat details may be provided after booking for urgent trip matters.</p>
     `
   }
 ];
 
+const stopWords = new Set(["a", "an", "and", "are", "as", "at", "be", "by", "can", "do", "does", "for", "from", "how", "i", "in", "is", "it", "me", "my", "of", "on", "or", "the", "this", "to", "what", "when", "where", "who", "with"]);
+
 function normalize(text) {
   return text
     .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/[^a-z0-9\s.-]/g, " ")
     .split(/\s+/)
-    .filter(Boolean);
+    .filter((word) => word && !stopWords.has(word));
 }
 
 function score(answer, words) {
   const target = `${answer.title} ${answer.keywords.join(" ")} ${answer.html}`.toLowerCase();
-  return words.reduce((total, word) => total + (target.includes(word) ? 1 : 0), 0);
+  return words.reduce((total, word) => {
+    if (answer.keywords.includes(word)) return total + 5;
+    if (target.includes(word)) return total + 1;
+    return total;
+  }, 0);
 }
 
 function buildMailLink(question) {
   const body = [
-    "Mind-Body Wellness Retreat question:",
+    "China Cultural Wellness Journey question:",
     "",
     question || "",
     "",
-    "Traveler age range:",
+    "Traveler count:",
+    "Age range:",
     "Preferred dates:",
-    "Number of travelers:",
     "Departure city:",
-    "Mobility/dietary/health notes:"
+    "Room preference / single occupancy needs:",
+    "Dietary, mobility, or health notes:"
   ].join("\n");
 
-  return `mailto:xletravels@gmail.com?subject=Mind-Body%20Wellness%20Retreat%20Question&body=${encodeURIComponent(body)}`;
+  return `mailto:${supportEmail}?subject=China%20Cultural%20Wellness%20Journey%20Question&body=${encodeURIComponent(body)}`;
+}
+
+function renderAnswer(title, html, question, needsHuman) {
+  return `
+    <h3>${title}</h3>
+    ${html}
+    ${needsHuman ? "<p><strong>Next step:</strong> please confirm this with the team before booking, payment, or flight purchase.</p>" : ""}
+    <div class="hero-actions">
+      <a class="button primary" href="${buildMailLink(question)}">Email human support</a>
+      <a class="button" href="../camp/China_Wellness_Cultural_Immersion_Retreat_10-Day_Program_EN.pdf">Open brochure</a>
+    </div>
+  `;
 }
 
 function respond(question) {
@@ -126,7 +400,7 @@ function respond(question) {
   const trimmed = question.trim();
 
   if (!trimmed) {
-    output.innerHTML = "<h3>Ask about the mind-body wellness retreat</h3><p>Try questions about suitability, pace, inclusions, activities, locations, food, medical boundaries, or manual support.</p>";
+    output.innerHTML = "<h3>Ask about the journey</h3><p>Try questions about price, inclusions, room type, hotels, dining, private transfers, itinerary, mobility, visas, flights, wellness boundaries, or custom requests.</p>";
     return;
   }
 
@@ -136,21 +410,20 @@ function respond(question) {
     .sort((a, b) => b.score - a.score);
 
   const best = ranked[0];
-  const needsHuman = !best || best.score === 0 || /price|date|refund|visa|medical|invoice|custom|private|hotel|homestay|room|stay/i.test(trimmed);
-  const title = needsHuman && (!best || best.score === 0) ? "Human support recommended" : best.title;
-  const html = best && best.score > 0
-    ? best.html
-    : "<p>This question needs manual confirmation. Please email the team with traveler details and the specific question.</p>";
+  const manualPattern = /final|exact|date|available|availability|refund|cancel|visa|medical|invoice|payment|contract|single|private|custom|allergy|mobility|doctor|flight|hotel|restaurant|child|emergency|insurance/i;
+  const needsHuman = !best || best.score === 0 || manualPattern.test(trimmed);
 
-  output.innerHTML = `
-    <h3>${title}</h3>
-    ${html}
-    ${needsHuman ? "<p><strong>Next step:</strong> send this to the team for confirmation before booking.</p>" : ""}
-    <div class="hero-actions">
-      <a class="button primary" href="${buildMailLink(trimmed)}">Email human support</a>
-      <a class="button" href="../camp/China_Wellness_Cultural_Immersion_Retreat_10-Day_Program.pdf">Open brochure</a>
-    </div>
-  `;
+  if (!best || best.score === 0) {
+    output.innerHTML = renderAnswer(
+      "Human support recommended",
+      "<p>This question needs manual confirmation. Please email the team with traveler details and the specific question.</p>",
+      trimmed,
+      true
+    );
+    return;
+  }
+
+  output.innerHTML = renderAnswer(best.title, best.html, trimmed, needsHuman);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
