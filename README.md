@@ -24,3 +24,14 @@ education project, exchange camp, supporting, operation
 - Internal QA test document: `internal/qa-document.html`
 - Internal QA test PDF: `internal/output/qa-document.pdf`
 - Source brochures: `camp/`
+
+## AI + Robotics student summer camp deliverables
+
+- Final AI + Robotics camp package: `FINAL student summer camp/`
+- AI + Robotics camp website: `student-summer-camp/index.html`
+- AI + Robotics camp website packaged copy: `FINAL student summer camp/05 Website/`
+- AI + Robotics English brochure source: `internal/student-summer-camp-brochure-en.html`
+- AI + Robotics Chinese brochure source: `internal/student-summer-camp-brochure-zh.html`
+- AI + Robotics parent Q&A source: `internal/student-summer-camp-qa-document.html`
+- AI + Robotics generated image assets: `assets/ai-robotics-camp/`
+- AI + Robotics generated PDFs: `internal/output/student-summer-camp/`

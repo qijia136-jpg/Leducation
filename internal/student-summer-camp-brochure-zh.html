@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>中国 AI + Robotics 学生暑期营 - 中文资料册</title>
+    <style>
+      :root { --ink:#17202a; --muted:#5f6b78; --line:#d7e0e8; --paper:#fffdf8; --soft:#eef5f7; --sky:#176f92; --sun:#d88b2d; --green:#32735f; --night:#102c39; }
+      * { box-sizing:border-box; }
+      body { margin:0; color:var(--ink); background:var(--paper); font-family:Arial,"Microsoft YaHei",sans-serif; line-height:1.5; }
+      .page { width:210mm; min-height:297mm; margin:0 auto; padding:16mm; background:var(--paper); break-after:page; page-break-after:always; position:relative; overflow:hidden; }
+      .cover { min-height:297mm; padding:0; display:flex; align-items:flex-end; color:#fff; background:linear-gradient(90deg, rgba(10,27,36,.92), rgba(10,27,36,.58), rgba(10,27,36,.2)), url("../assets/ai-robotics-camp/hero-ai-robotics.png"); background-size:cover; background-position:center; }
+      .cover-inner { width:100%; padding:30mm 18mm; }
+      .eyebrow { margin:0 0 8mm; color:#d8f2ff; font-size:13px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+      h1 { max-width:160mm; margin:0 0 7mm; font-size:42px; line-height:1.08; letter-spacing:0; }
+      .cover-subtitle { max-width:145mm; margin:0 0 12mm; font-size:18px; }
+      .cover-meta { display:grid; grid-template-columns:repeat(4,1fr); gap:4mm; max-width:174mm; }
+      .cover-meta div { padding:4mm; border:1px solid rgba(255,255,255,.36); border-radius:8px; background:rgba(255,255,255,.13); }
+      .cover-meta strong,.cover-meta span { display:block; } .cover-meta span { margin-top:1mm; color:#eaf7fb; font-size:12px; }
+      .chapter { display:grid; grid-template-columns:40mm 1fr; gap:8mm; margin-bottom:6mm; padding-bottom:5mm; border-bottom:1px solid var(--line); }
+      .chapter-label { color:var(--sun); font-size:13px; font-weight:900; letter-spacing:.07em; text-transform:uppercase; }
+      h2 { margin:0 0 4mm; font-size:26px; line-height:1.16; } h3 { margin:0 0 2.5mm; color:var(--night); font-size:16px; line-height:1.22; }
+      .lead { margin:0; color:var(--muted); font-size:15px; }
+      .grid-2,.grid-3,.grid-5 { display:grid; gap:4mm; } .grid-2 { grid-template-columns:repeat(2,1fr); } .grid-3 { grid-template-columns:repeat(3,1fr); } .grid-5 { grid-template-columns:repeat(5,1fr); }
+      .card { padding:4.5mm; border:1px solid var(--line); border-radius:8px; background:#fff; } .card.tint { background:#f4faf8; border-color:rgba(50,115,95,.36); }
+      .card p { margin:0 0 2.5mm; color:var(--muted); } ul { margin:0; padding-left:5mm; color:var(--muted); } li { margin:0 0 1.7mm; }
+      .image-card { overflow:hidden; padding:0; } .image-card img { display:block; width:100%; height:33mm; object-fit:cover; } .image-card div { padding:4mm; }
+      .calendar { display:grid; grid-template-columns:repeat(7,1fr); gap:2.2mm; }
+      .weekday { padding:2mm 1mm; border-radius:6px; background:var(--night); color:#fff; font-size:9.5px; font-weight:900; text-align:center; text-transform:uppercase; }
+      .blank { min-height:34mm; border:1px dashed var(--line); border-radius:8px; background:rgba(238,245,247,.55); }
+      .day { border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#fff; break-inside:avoid; page-break-inside:avoid; min-height:34mm; }
+      .day img { width:100%; height:13mm; object-fit:cover; display:block; } .day div { padding:2mm; } .day strong { display:block; color:var(--sky); font-size:9.5px; } .day p { margin:.8mm 0 0; color:var(--muted); font-size:8.8px; line-height:1.28; }
+      .route { border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#fff; } .route img { width:100%; height:30mm; object-fit:cover; display:block; } .route div { padding:3.5mm; } .route strong { color:var(--sun); text-transform:uppercase; font-size:12px; }
+      .quote { margin-top:5mm; padding:4.5mm; border-left:5px solid var(--sun); background:var(--soft); color:var(--night); font-weight:800; }
+      .footer-note { position:absolute; left:16mm; right:16mm; bottom:8mm; display:flex; justify-content:space-between; gap:8mm; color:var(--muted); font-size:10.5px; border-top:1px solid var(--line); padding-top:3mm; }
+      @page { size:A4; margin:0; } @media print { body { background:#fff; } .page { margin:0; } }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <div class="cover-inner">
+        <p class="eyebrow">Student AI + Robotics Summer Camp in China</p>
+        <h1>中国 AI + Robotics 学生暑期营<br>搭建机器人，训练创意，探索中国</h1>
+        <p class="cover-subtitle">20 天青少年项目：AI 素养、机器人工程、团队协作、高校参访、文化 road trip、机器人比赛、成果展示与结营晚宴。</p>
+        <div class="cover-meta">
+          <div><strong>20 天</strong><span>周六抵达，Day 20 灵活离境</span></div>
+          <div><strong>AI + Robotics</strong><span>两周课程与工程工作室</span></div>
+          <div><strong>五条路线</strong><span>西安、上海、杭州、厦门、北京</span></div>
+          <div><strong>机器人比赛</strong><span>竞赛验证 + 成果展示</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="chapter"><div class="chapter-label">Program</div><div><h2>项目定位</h2><p class="lead">这是一套 AI + Robotics 主题营，不是单纯观光团。学生会学习、搭建、调试、带着任务出行，并在结营前完成机器人比赛和成果展示。</p></div></div>
+      <div class="grid-3">
+        <article class="card tint"><h3>适合学生</h3><p>建议 13-17 岁青少年参加，适合文化和人种多样的国际学生团队；可按零基础、进阶或学校团组调整难度。</p></article>
+        <article class="card"><h3>学习核心</h3><p>机器人结构、编程逻辑、传感器、AI 素养、负责任科技、工程笔记、团队协作和展示表达。</p></article>
+        <article class="card"><h3>可见成果</h3><p>每组完成机器人作品、比赛成绩、设计说明、演示素材，以及和城市 route 相关的学习反思。</p></article>
+      </div>
+      <div class="grid-2" style="margin-top:5mm">
+        <article class="image-card card"><img src="../assets/ai-robotics-camp/day-03.png" alt=""><div><h3>周一至周四工程工作室</h3><p>短课、搭建冲刺、导师反馈、调试、展示训练和每日 reflection。</p></div></article>
+        <article class="image-card card"><img src="../assets/ai-robotics-camp/day-17.png" alt=""><div><h3>结营周一</h3><p>机器人挑战赛、工程评审、成果展示、证书、导师点评和结营晚宴。</p></div></article>
+      </div>
+      <div class="quote">建议班型：15-30 人。建议配备双语项目负责人、机器人课程导师、生活老师、当地协调员和应急联系人。</div>
+      <div class="footer-note"><span>AI + Robotics Student Summer Camp</span><span>Contact: xletravels@gmail.com</span></div>
+    </section>
+
+    <section class="page">
+      <div class="chapter"><div class="chapter-label">Calendar 1</div><div><h2>日历日程：抵达与第一周</h2><p class="lead">日历按周一至周日排列。Day 1 是周六，因此第一行前五格为空白准备格。</p></div></div>
+      <div class="calendar">
+        <div class="weekday">Mon</div><div class="weekday">Tue</div><div class="weekday">Wed</div><div class="weekday">Thu</div><div class="weekday">Fri</div><div class="weekday">Sat</div><div class="weekday">Sun</div>
+        <div class="blank"></div><div class="blank"></div><div class="blank"></div><div class="blank"></div><div class="blank"></div>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-01.png" alt=""><div><strong>Day 1 周六</strong><p>抵达、接机/接站、入住、安全说明、破冰。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-02.png" alt=""><div><strong>Day 2 周日</strong><p>Warm welcome、分组、机器人套件介绍、欢迎晚餐。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-03.png" alt=""><div><strong>Day 3 周一</strong><p>机器人结构、电机、传感器和第一次搭建。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-04.png" alt=""><div><strong>Day 4 周二</strong><p>编程逻辑、运动控制、测试记录。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-05.png" alt=""><div><strong>Day 5 周三</strong><p>AI 素养、数据偏差、视觉识别概念。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-06.png" alt=""><div><strong>Day 6 周四</strong><p>团队工程工作室，准备 road trip 观察任务。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-07.png" alt=""><div><strong>Day 7 周五</strong><p>Road Trip 1A：高校或创新空间参访。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-08.png" alt=""><div><strong>Day 8 周六</strong><p>Road Trip 1B：景点游览与文化学习。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-09.png" alt=""><div><strong>Day 9 周日</strong><p>休息、自习或报名参加深度体验。</p></div></article>
+      </div>
+      <div class="footer-note"><span>每日图文日历，第 1 / 2 页。</span><span>xletravels@gmail.com</span></div>
+    </section>
+
+    <section class="page">
+      <div class="chapter"><div class="chapter-label">Calendar 2</div><div><h2>日历日程：第二周、比赛与返程</h2><p class="lead">第二页从 Day 10 开始，Day 17 机器人比赛固定在周一；PDF 中每个日期格不会被分页切断。</p></div></div>
+      <div class="calendar">
+        <div class="weekday">Mon</div><div class="weekday">Tue</div><div class="weekday">Wed</div><div class="weekday">Thu</div><div class="weekday">Fri</div><div class="weekday">Sat</div><div class="weekday">Sun</div>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-10.png" alt=""><div><strong>Day 10 周一</strong><p>机器人任务设计和得分策略。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-11.png" alt=""><div><strong>Day 11 周二</strong><p>传感器、自主运行、校准与数据记录。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-12.png" alt=""><div><strong>Day 12 周三</strong><p>调试冲刺、故障分析和同伴评审。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-13.png" alt=""><div><strong>Day 13 周四</strong><p>工程笔记、演示脚本和路演准备。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-14.png" alt=""><div><strong>Day 14 周五</strong><p>Road Trip 2A：第二次高校或创新参访。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-15.png" alt=""><div><strong>Day 15 周六</strong><p>Road Trip 2B：路线城市重点景点游览。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-16.png" alt=""><div><strong>Day 16 周日</strong><p>休息、彩排、机器人维修和材料检查。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-17.png" alt=""><div><strong>Day 17 周一</strong><p>机器人比赛、成果展示和结营晚宴。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-18.png" alt=""><div><strong>Day 18 周二</strong><p>上海城市游览，科技馆或动物园视开放安排。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-19.png" alt=""><div><strong>Day 19 周三</strong><p>行李整理、项目文件导出、航班确认。</p></div></article>
+        <article class="day"><img src="../assets/ai-robotics-camp/day-20.png" alt=""><div><strong>Day 20 机动</strong><p>根据航班时间离境。</p></div></article>
+        <div class="blank"></div><div class="blank"></div><div class="blank"></div>
+      </div>
+      <div class="footer-note"><span>每日图文日历，第 2 / 2 页。图片为 AI 生成的项目展示参考图。</span><span>xletravels@gmail.com</span></div>
+    </section>
+
+    <section class="page">
+      <div class="chapter"><div class="chapter-label">Routes</div><div><h2>五条 Road Trip 路线</h2><p class="lead">所有路线共享同一套 AI + Robotics 课程主轴，可根据学校目标、航班、季节和供应商档期选择城市。</p></div></div>
+      <div class="grid-5">
+        <article class="route"><img src="../assets/ai-robotics-camp/route-xian.png" alt=""><div><strong>西安</strong><h3>西安交大 + 兵马俑</h3><p>参观西安交通大学，结合工程启发；游览兵马俑和历史文化城市。</p></div></article>
+        <article class="route"><img src="../assets/ai-robotics-camp/route-shanghai.png" alt=""><div><strong>上海</strong><h3>复旦、上海交大、苏州、无锡</h3><p>上海城市风光，参访复旦和上海交大，可前往苏州、无锡游览。</p></div></article>
+        <article class="route"><img src="../assets/ai-robotics-camp/route-hangzhou.png" alt=""><div><strong>杭州</strong><h3>浙大 + 西湖大学</h3><p>参观浙江大学、西湖大学，游览西湖和西塘水乡古镇。</p></div></article>
+        <article class="route"><img src="../assets/ai-robotics-camp/route-xiamen.png" alt=""><div><strong>厦门</strong><h3>厦门大学 + 周边景点</h3><p>参观厦门大学，游览周边车行几小时可达的著名景点。</p></div></article>
+        <article class="route"><img src="../assets/ai-robotics-camp/route-beijing.png" alt=""><div><strong>北京</strong><h3>清华、北大、长城</h3><p>参观清华和北大，游览长城、圆明园等著名景点。</p></div></article>
+      </div>
+      <div class="quote">高校参访为教育参访，不等同于官方招生或录取活动，除非另有书面确认。</div>
+      <div class="footer-note"><span>路线细节以最终预约和校园开放情况为准。</span><span>AI + Robotics Camp</span></div>
+    </section>
+
+    <section class="page">
+      <div class="chapter"><div class="chapter-label">Parents</div><div><h2>服务、安全与报名确认</h2><p class="lead">AI + Robotics 学生营需要清晰的课程、监管、交通和应急边界。</p></div></div>
+      <div class="grid-2">
+        <article class="card tint"><h3>通常包含</h3><ul><li>项目期住宿、基础餐食和营地管理</li><li>AI + Robotics 课程、机器人材料或共享套件、导师工作坊、团队项目、比赛和成果展示</li><li>行程内 road trip 交通、列明门票和带队服务</li><li>双语协调、学生日常支持和家长沟通</li></ul></article>
+        <article class="card"><h3>通常不包含</h3><ul><li>国际机票、护照、签证、保险和行李费用</li><li>个人消费、洗衣、电话卡、购物和额外餐饮</li><li>未写入报价的周日选修深度体验</li><li>因航班变化、天气、个人原因或不可抗力产生的额外费用</li></ul></article>
+      </div>
+      <div class="quote">报名前请确认：学生年龄、机器人/编程基础、语言能力、过敏与健康情况、监护授权、保险、签证状态、航班信息、饮食禁忌、紧急联系人和周日选修活动授权。</div>
+      <div class="footer-note"><span>图片和日程为参考；最终安排以确认供应商、天气、交通和场馆开放为准。</span><span>xletravels@gmail.com</span></div>
+    </section>
+  </body>
+</html>
