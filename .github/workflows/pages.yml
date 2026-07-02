@@ -34,6 +34,11 @@ jobs:
           rm -rf _site
           mkdir -p _site/internal/output _site/camp
           cp -R index.html assets wellness-qa _site/
+          cp -R student-summer-camp _site/
+          mkdir -p _site/student-summer-camp/assets _site/"FINAL student summer camp"
+          cp -R assets/ai-robotics-camp _site/student-summer-camp/assets/
+          cp "FINAL student summer camp/01 Student Summer Camp Brochure EN.pdf" _site/"FINAL student summer camp/"
+          cp "FINAL student summer camp/02 Student Summer Camp Brochure ZH.pdf" _site/"FINAL student summer camp/"
           cp camp/China_Youth_AI_Robotics_Camp_Admissions_Brochure_No_University_Logos.pdf _site/camp/
           cp camp/China_Youth_Cultural_Exchange_Camp_Admissions_Brochure_Clean.pdf _site/camp/
           cp camp/China_Wellness_Cultural_Immersion_Retreat_10-Day_Program.pdf _site/camp/
